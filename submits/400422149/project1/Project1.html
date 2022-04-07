@@ -1,0 +1,2639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-07 Thu 16:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project1</title>
+<meta name="author" content="Mohammadb Ghorbani" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Project1</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7b0d83b">1. Airbnb</a>
+<ul>
+<li><a href="#org4c66610">1.1. import libraries</a></li>
+<li><a href="#org1b054fd">1.2. config packages</a></li>
+<li><a href="#org755f557">1.3. read data</a></li>
+<li><a href="#org6b2cf37">1.4. handling missing values</a>
+<ul>
+<li><a href="#orgf3fedf1">1.4.1. name</a></li>
+<li><a href="#org429d753">1.4.2. host name</a></li>
+<li><a href="#org3bd0f61">1.4.3. last review</a></li>
+<li><a href="#org9c20e62">1.4.4. reviews per month</a></li>
+<li><a href="#org2223da3">1.4.5. fill missing values with 0</a></li>
+</ul>
+</li>
+<li><a href="#org7d2d82e">1.5. Clean duplicates</a></li>
+<li><a href="#orgac0df63">1.6. Get Correlation between data</a></li>
+<li><a href="#orgbef3eea">1.7. Handle Outliers</a>
+<ul>
+<li><a href="#orgd594ef8">1.7.1. price</a></li>
+<li><a href="#org93a1ae9">1.7.2. minimum nights</a></li>
+</ul>
+</li>
+<li><a href="#orgde70d97">1.8. Visual data</a>
+<ul>
+<li><a href="#org40d6536">1.8.1. neighbourhood group</a></li>
+<li><a href="#org12fe6c7">1.8.2. neighbourhood</a></li>
+<li><a href="#org55b60d7">1.8.3. room type</a></li>
+<li><a href="#org49b2312">1.8.4. availability 365</a></li>
+</ul>
+</li>
+<li><a href="#org9328d11">1.9. Analysis hosts</a></li>
+<li><a href="#org3c8e1b4">1.10. Comments</a></li>
+<li><a href="#org5777c99">1.11. Hypothesis Tests</a>
+<ul>
+<li><a href="#org01e1d87">1.11.1. Manhattan price distribution is normal</a></li>
+<li><a href="#org048e838">1.11.2. Staten Island price distribution is normal</a></li>
+<li><a href="#org8dca33c">1.11.3. top hosts and top host based on reviews are the same</a></li>
+<li><a href="#orga8553e8">1.11.4. People spend same amount of money on Manhattan and Brooklyn</a></li>
+<li><a href="#orgc5a0807">1.11.5. relation between all year availability with price</a></li>
+</ul>
+</li>
+<li><a href="#org6f4c399">1.12. Predict Price</a>
+<ul>
+<li><a href="#org5644254">1.12.1. Prepare Data for model</a></li>
+<li><a href="#orgf4c0754">1.12.2. spilit data</a></li>
+<li><a href="#org3dc739a">1.12.3. model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org59fb39e">2. Apartment rental offers in Germany</a>
+<ul>
+<li><a href="#orge24d968">2.1. import libraries</a></li>
+<li><a href="#org94ac570">2.2. config packages</a></li>
+<li><a href="#org7526adb">2.3. read data</a></li>
+<li><a href="#org8f655c8">2.4. handling missing values &amp; cleaning data</a>
+<ul>
+<li><a href="#org6e931c2">2.4.1. null data</a></li>
+<li><a href="#org36a8fc5">2.4.2. delete columns with more than %50 missing values</a></li>
+<li><a href="#org90e46e9">2.4.3. delete columns that are not usefull</a></li>
+<li><a href="#orge3762b9">2.4.4. delete unusal data</a></li>
+<li><a href="#orgd04e903">2.4.5. fill numeric data with mean</a></li>
+<li><a href="#orgac96fab">2.4.6. categorical data with lots of states</a></li>
+<li><a href="#orgfd0bf89">2.4.7. fill categorical data with other</a></li>
+<li><a href="#org4df2695">2.4.8. reduce number of categories</a></li>
+</ul>
+</li>
+<li><a href="#org72b5195">2.5. Clean duplicates</a>
+<ul>
+<li><a href="#orgb50f07f">2.5.1. remove duplicates</a></li>
+</ul>
+</li>
+<li><a href="#org097fc3a">2.6. Handle Outliers</a></li>
+<li><a href="#orgc408b1e">2.7. Visual data</a>
+<ul>
+<li><a href="#org2173419">2.7.1. regio2 top 13</a></li>
+<li><a href="#org53c9f83">2.7.2. livingSpace</a></li>
+<li><a href="#org5a23ea5">2.7.3. baseRent</a></li>
+<li><a href="#org724b25f">2.7.4. houses</a></li>
+</ul>
+</li>
+<li><a href="#org7b71ca5">2.8. Models</a>
+<ul>
+<li><a href="#orgae5d152">2.8.1. prepare data for model</a></li>
+<li><a href="#org9c13da1">2.8.2. split data and model</a></li>
+</ul>
+</li>
+<li><a href="#org49c20f1">2.9. ‫‪Multiprocessing‬‬</a></li>
+<li><a href="#org353748a">2.10. <span class="todo TODO">TODO</span> dask &amp; pyspark</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org7b0d83b" class="outline-2">
+<h2 id="org7b0d83b"><span class="section-number-2">1.</span> Airbnb</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+
+
+<div id="outline-container-org4c66610" class="outline-3">
+<h3 id="org4c66610"><span class="section-number-3">1.1.</span> import libraries</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">import</span> warnings
+<span style="color: #51afef;">import</span> pandas <span style="color: #51afef;">as</span> pd
+<span style="color: #51afef;">from</span> scipy.stats <span style="color: #51afef;">import</span> shapiro, pearsonr, ttest_rel
+<span style="color: #51afef;">import</span> numpy <span style="color: #51afef;">as</span> np
+<span style="color: #51afef;">import</span> matplotlib.pyplot <span style="color: #51afef;">as</span> plt
+<span style="color: #51afef;">import</span> seaborn <span style="color: #51afef;">as</span> sns
+<span style="color: #51afef;">from</span> sklearn.linear_model <span style="color: #51afef;">import</span> LinearRegression
+<span style="color: #51afef;">from</span> sklearn.model_selection <span style="color: #51afef;">import</span> train_test_split
+<span style="color: #51afef;">from</span> sklearn.metrics <span style="color: #51afef;">import</span> r2_score
+<span style="color: #51afef;">from</span> genderize <span style="color: #51afef;">import</span> Genderize
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b054fd" class="outline-3">
+<h3 id="org1b054fd"><span class="section-number-3">1.2.</span> config packages</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-python">warnings.filterwarnings(<span style="color: #98be65;">"ignore"</span>)
+
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">pd.set_option("display.max_columns", None)</span>
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">pd.set_option("display.max_rows", None)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org755f557" class="outline-3">
+<h3 id="org755f557"><span class="section-number-3">1.3.</span> read data</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>read data from csv with pandas package</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">raw_data</span> = pd.read_csv(<span style="color: #98be65;">'AB_NYC_2019.csv'</span>)
+<span style="color: #51afef;">print</span>(raw_data.head())
+<span style="color: #51afef;">print</span>(raw_data.info())
+
+</pre>
+</div>
+
+<pre class="example" id="org0119239">
+     id                                              name  host_id    host_name neighbourhood_group neighbourhood  ...  minimum_nights  number_of_reviews last_review  reviews_per_month  calculated_host_listings_count  availability_365
+0  2539                Clean &amp; quiet apt home by the park     2787         John            Brooklyn    Kensington  ...               1                  9  2018-10-19               0.21                               6               365
+1  2595                             Skylit Midtown Castle     2845     Jennifer           Manhattan       Midtown  ...               1                 45  2019-05-21               0.38                               2               355
+2  3647               THE VILLAGE OF HARLEM....NEW YORK !     4632    Elisabeth           Manhattan        Harlem  ...               3                  0         NaN                NaN                               1               365
+3  3831                   Cozy Entire Floor of Brownstone     4869  LisaRoxanne            Brooklyn  Clinton Hill  ...               1                270  2019-07-05               4.64                               1               194
+4  5022  Entire Apt: Spacious Studio/Loft by central park     7192        Laura           Manhattan   East Harlem  ...              10                  9  2018-11-19               0.10                               1                 0
+
+[5 rows x 16 columns]
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 48895 entries, 0 to 48894
+Data columns (total 16 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   id                              48895 non-null  int64  
+ 1   name                            48879 non-null  object 
+ 2   host_id                         48895 non-null  int64  
+ 3   host_name                       48874 non-null  object 
+ 4   neighbourhood_group             48895 non-null  object 
+ 5   neighbourhood                   48895 non-null  object 
+ 6   latitude                        48895 non-null  float64
+ 7   longitude                       48895 non-null  float64
+ 8   room_type                       48895 non-null  object 
+ 9   price                           48895 non-null  int64  
+ 10  minimum_nights                  48895 non-null  int64  
+ 11  number_of_reviews               48895 non-null  int64  
+ 12  last_review                     38843 non-null  object 
+ 13  reviews_per_month               38843 non-null  float64
+ 14  calculated_host_listings_count  48895 non-null  int64  
+ 15  availability_365                48895 non-null  int64  
+dtypes: float64(3), int64(7), object(6)
+memory usage: 6.0+ MB
+None
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org6b2cf37" class="outline-3">
+<h3 id="org6b2cf37"><span class="section-number-3">1.4.</span> handling missing values</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>there is 4 series that contain missing values</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">raw_data.isnull().<span style="color: #c678dd;">sum</span>()
+
+
+</pre>
+</div>
+
+<pre class="example" id="org5b2d220">
+id                                    0
+name                                 16
+host_id                               0
+host_name                            21
+neighbourhood_group                   0
+neighbourhood                         0
+latitude                              0
+longitude                             0
+room_type                             0
+price                                 0
+minimum_nights                        0
+number_of_reviews                     0
+last_review                       10052
+reviews_per_month                 10052
+calculated_host_listings_count        0
+availability_365                      0
+dtype: int64
+</pre>
+</div>
+
+<div id="outline-container-orgf3fedf1" class="outline-4">
+<h4 id="orgf3fedf1"><span class="section-number-4">1.4.1.</span> name</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>right now we will not use this feature , we can drop it , or set it to 0.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.name.describe())
+
+</pre>
+</div>
+
+<pre class="example">
+count              48879
+unique             47905
+top       Hillside Hotel
+freq                  18
+Name: name, dtype: object
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org429d753" class="outline-4">
+<h4 id="org429d753"><span class="section-number-4">1.4.2.</span> host name</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li>this feature will be used to predict gender of host so we will keep it for now and fillna with 0, also we can use the value 0 for this feature to see if rows that don&rsquo;t have name can have any effect on reviews.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.host_name.describe())
+</pre>
+</div>
+
+<pre class="example">
+count       48874
+unique      11452
+top       Michael
+freq          417
+Name: host_name, dtype: object
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org3bd0f61" class="outline-4">
+<h4 id="org3bd0f61"><span class="section-number-4">1.4.3.</span> last review</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li>if we don&rsquo;t have any last review we don&rsquo;t have any reviews at all. so we will keep this feature and fill it with 0.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.last_review.describe())
+
+</pre>
+</div>
+
+<pre class="example">
+count          38843
+unique          1764
+top       2019-06-23
+freq            1413
+Name: last_review, dtype: object
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org9c20e62" class="outline-4">
+<h4 id="org9c20e62"><span class="section-number-4">1.4.4.</span> reviews per month</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<ul class="org-ul">
+<li>we have same number of missing value in last review and reviews per month , so any row that doesn&rsquo;t have any last review should have null value for reviews per month, like last review we will fill it with 0.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+
+
+<span style="color: #51afef;">print</span>(raw_data.reviews_per_month.describe())
+<span style="color: #dcaeea;">mask</span> = (raw_data.reviews_per_month.isnull())
+<span style="color: #51afef;">print</span>(raw_data[mask])
+
+</pre>
+</div>
+
+<pre class="example" id="orgc756c52">
+count    38843.000000
+mean         1.373221
+std          1.680442
+min          0.010000
+25%          0.190000
+50%          0.720000
+75%          2.020000
+max         58.500000
+Name: reviews_per_month, dtype: float64
+             id                                               name   host_id        host_name neighbourhood_group  ... number_of_reviews  last_review  reviews_per_month calculated_host_listings_count  availability_365
+2          3647                THE VILLAGE OF HARLEM....NEW YORK !      4632        Elisabeth           Manhattan  ...                 0          NaN                NaN                              1               365
+19         7750                  Huge 2 BR Upper East  Cental Park     17985             Sing           Manhattan  ...                 0          NaN                NaN                              2               249
+26         8700  Magnifique Suite au N de Manhattan - vue Cloitres     26394  Claude &amp; Sophie           Manhattan  ...                 0          NaN                NaN                              1                 0
+36        11452                        Clean and Quiet in Brooklyn      7355               Vt            Brooklyn  ...                 0          NaN                NaN                              1               365
+38        11943                          Country space in the city     45445          Harriet            Brooklyn  ...                 0          NaN                NaN                              1               365
+...         ...                                                ...       ...              ...                 ...  ...               ...          ...                ...                            ...               ...
+48890  36484665    Charming one bedroom - newly renovated rowhouse   8232441          Sabrina            Brooklyn  ...                 0          NaN                NaN                              2                 9
+48891  36485057      Affordable room in Bushwick/East Williamsburg   6570630          Marisol            Brooklyn  ...                 0          NaN                NaN                              2                36
+48892  36485431            Sunny Studio at Historical Neighborhood  23492952    Ilgar &amp; Aysel           Manhattan  ...                 0          NaN                NaN                              1                27
+48893  36485609               43rd St. Time Square-cozy single bed  30985759              Taz           Manhattan  ...                 0          NaN                NaN                              6                 2
+48894  36487245  Trendy duplex in the very heart of Hell's Kitchen  68119814       Christophe           Manhattan  ...                 0          NaN                NaN                              1                23
+
+[10052 rows x 16 columns]
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org2223da3" class="outline-4">
+<h4 id="org2223da3"><span class="section-number-4">1.4.5.</span> fill missing values with 0</h4>
+<div class="outline-text-4" id="text-1-4-5">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">data</span> = raw_data.fillna({<span style="color: #98be65;">'reviews_per_month'</span>:<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'last_review'</span>:<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'name'</span>:<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'host_name'</span>:<span style="color: #da8548; font-weight: bold;">0</span>})
+data.isnull().<span style="color: #c678dd;">sum</span>()
+
+</pre>
+</div>
+
+<pre class="example" id="orgb4f57b5">
+id                                0
+name                              0
+host_id                           0
+host_name                         0
+neighbourhood_group               0
+neighbourhood                     0
+latitude                          0
+longitude                         0
+room_type                         0
+price                             0
+minimum_nights                    0
+number_of_reviews                 0
+last_review                       0
+reviews_per_month                 0
+calculated_host_listings_count    0
+availability_365                  0
+dtype: int64
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7d2d82e" class="outline-3">
+<h3 id="org7d2d82e"><span class="section-number-3">1.5.</span> Clean duplicates</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>remove duplicates from dataset</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.duplicated().<span style="color: #c678dd;">sum</span>())
+raw_data.drop_duplicates(inplace=<span style="color: #a9a1e1;">True</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+0
+</pre>
+</div>
+</div>
+<div id="outline-container-orgac0df63" class="outline-3">
+<h3 id="orgac0df63"><span class="section-number-3">1.6.</span> Get Correlation between data</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="org-src-container">
+<pre class="src src-python">
+raw_data.columns
+
+</pre>
+</div>
+
+<pre class="example">
+Index(['id', 'name', 'host_id', 'host_name', 'neighbourhood_group',
+       'neighbourhood', 'latitude', 'longitude', 'room_type', 'price',
+       'minimum_nights', 'number_of_reviews', 'last_review',
+       'reviews_per_month', 'calculated_host_listings_count',
+       'availability_365'],
+      dtype='object')
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+<span style="color: #dcaeea;">corr</span> = raw_data.corr(method=<span style="color: #98be65;">'kendall'</span>)
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">15</span>,<span style="color: #da8548; font-weight: bold;">15</span>))
+<span style="color: #dcaeea;">corr_fname</span> = <span style="color: #98be65;">'img/correlation.png'</span>
+<span style="color: #dcaeea;">sns_plot</span> = sns.heatmap(corr, annot=<span style="color: #a9a1e1;">True</span>)
+plt.savefig(corr_fname)
+corr_fname
+
+</pre>
+</div>
+
+
+<div id="orgaf02baa" class="figure">
+<p><img src="img/correlation.png" alt="correlation.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbef3eea" class="outline-3">
+<h3 id="orgbef3eea"><span class="section-number-3">1.7.</span> Handle Outliers</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>there is no model for training so will not drop any data unless for training model , so before training outliers will be droped for now we will just check them and plot them.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgd594ef8" class="outline-4">
+<h4 id="orgd594ef8"><span class="section-number-4">1.7.1.</span> price</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<ul class="org-ul">
+<li>let&rsquo;s check the price data and see the results</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+plt.hist(data.price, bins=<span style="color: #da8548; font-weight: bold;">100</span>)
+<span style="color: #dcaeea;">price_hist_plot</span> = plt.plot()
+<span style="color: #dcaeea;">price_hist_fname</span> = <span style="color: #98be65;">'img/raw_price_hist.png'</span>
+plt.savefig(price_hist_fname)
+price_hist_fname
+</pre>
+</div>
+
+
+<div id="orga0d1ae3" class="figure">
+<p><img src="img/raw_price_hist.png" alt="raw_price_hist.png" />
+</p>
+</div>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">data_price_len</span> = <span style="color: #c678dd;">len</span>(data.price)
+
+<span style="color: #dcaeea;">lower_price_mask</span> = (data.price &lt;= <span style="color: #da8548; font-weight: bold;">10</span>)
+<span style="color: #dcaeea;">low_price_len</span> = <span style="color: #c678dd;">len</span>(data[lower_price_mask])
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"number of lower price mask"</span>, (low_price_len/data_price_len) * <span style="color: #da8548; font-weight: bold;">100</span>)
+
+<span style="color: #dcaeea;">upper_price_mask</span> = (data.price &gt;= <span style="color: #da8548; font-weight: bold;">500</span>)
+<span style="color: #dcaeea;">upper_price_len</span> = <span style="color: #c678dd;">len</span>(data[upper_price_mask])
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"number of upper price mask"</span>, (upper_price_len/data_price_len) * <span style="color: #da8548; font-weight: bold;">100</span>)
+
+<span style="color: #dcaeea;">filtered_price_data_upper_mask</span> = (data.price &lt; <span style="color: #da8548; font-weight: bold;">500</span>)
+<span style="color: #dcaeea;">filtered_price_data_lower_mask</span> = (data.price &gt; <span style="color: #da8548; font-weight: bold;">10</span>)
+<span style="color: #dcaeea;">filtered_price_mask</span> = filtered_price_data_upper_mask &amp; filtered_price_data_lower_mask
+<span style="color: #dcaeea;">filtered_price_data</span> = (data[filtered_price_mask])
+
+</pre>
+</div>
+
+<pre class="example">
+number of lower price mask 0.0572655690765927
+number of upper price mask 2.5258206360568565
+</pre>
+
+
+<ul class="org-ul">
+<li>there is 0.06% of data bellow 10$ and 2.52% of data price more than 500$ let&rsquo;s see histogram for filtered price data and raw price data.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.hist(filtered_price_data.price, )
+<span style="color: #dcaeea;">filtered_price_hist_plot</span> = plt.plot()
+<span style="color: #dcaeea;">filtered_price_hist_fname</span> = <span style="color: #98be65;">'img/filtered_price_hist.png'</span>
+plt.savefig(filtered_price_hist_fname)
+filtered_price_hist_fname
+
+</pre>
+</div>
+
+
+<div id="org85a4e45" class="figure">
+<p><img src="img/filtered_price_hist.png" alt="filtered_price_hist.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org93a1ae9" class="outline-4">
+<h4 id="org93a1ae9"><span class="section-number-4">1.7.2.</span> minimum nights</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<ul class="org-ul">
+<li>lets plot minimum nights data and check it.</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.hist(data.minimum_nights)
+<span style="color: #dcaeea;">minimum_nights_plot</span> = plt.plot()
+<span style="color: #dcaeea;">minimum_nights_plot_fname</span> = <span style="color: #98be65;">'img/minimum_nights_plot.png'</span>
+plt.savefig(minimum_nights_plot_fname)
+minimum_nights_plot_fname
+
+
+</pre>
+</div>
+
+
+<div id="org8e619e9" class="figure">
+<p><img src="img/minimum_nights_plot.png" alt="minimum_nights_plot.png" />
+</p>
+</div>
+
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">data_minimum_nights_len</span> = <span style="color: #c678dd;">len</span>(data.minimum_nights)
+
+<span style="color: #dcaeea;">lower_minimum_nights_mask</span> = (data.minimum_nights &gt; <span style="color: #da8548; font-weight: bold;">30</span>)
+<span style="color: #dcaeea;">lower_minimum_nights_len</span> = <span style="color: #c678dd;">len</span>(data[lower_minimum_nights_mask])
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"number of upper minimum nights mask upper than 30"</span>, (lower_minimum_nights_len/data_minimum_nights_len) * <span style="color: #da8548; font-weight: bold;">100</span>,<span style="color: #98be65;">"%"</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+number of upper minimum nights mask upper than 30 1.5277635750076695 %
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">filtered_minimum_nights_mask</span> = (data.minimum_nights &lt;= <span style="color: #da8548; font-weight: bold;">30</span>)
+<span style="color: #dcaeea;">filtered_minimum_nights_data</span> = (data[filtered_minimum_nights_mask])
+
+plt.clf()
+plt.hist(filtered_minimum_nights_data.minimum_nights, bins=<span style="color: #da8548; font-weight: bold;">5</span>)
+<span style="color: #dcaeea;">filtered_minimum_nights_plot</span> = plt.plot()
+<span style="color: #dcaeea;">filtered_minimum_nights_plot_fname</span> = <span style="color: #98be65;">'img/filtered_minimum_nights_plot.png'</span>
+plt.savefig(filtered_minimum_nights_plot_fname)
+filtered_minimum_nights_plot_fname
+
+</pre>
+</div>
+
+
+<div id="org8216a3b" class="figure">
+<p><img src="img/filtered_minimum_nights_plot.png" alt="filtered_minimum_nights_plot.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde70d97" class="outline-3">
+<h3 id="orgde70d97"><span class="section-number-3">1.8.</span> Visual data</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org40d6536" class="outline-4">
+<h4 id="org40d6536"><span class="section-number-4">1.8.1.</span> neighbourhood group</h4>
+<div class="outline-text-4" id="text-1-8-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.neighbourhood_group.value_counts()/<span style="color: #c678dd;">len</span>(data) * <span style="color: #da8548; font-weight: bold;">100</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+Manhattan        44.301053
+Brooklyn         41.116679
+Queens           11.588097
+Bronx             2.231312
+Staten Island     0.762859
+Name: neighbourhood_group, dtype: float64
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.hist(data.neighbourhood_group)
+<span style="color: #dcaeea;">neighbourhood_group_plot_fname</span> = <span style="color: #98be65;">'img/neighbourhood_group_plot.png'</span>
+plt.savefig(neighbourhood_group_plot_fname)
+neighbourhood_group_plot_fname
+</pre>
+</div>
+
+
+<div id="org9e8e708" class="figure">
+<p><img src="img/neighbourhood_group_plot.png" alt="neighbourhood_group_plot.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+sns.scatterplot(data.longitude, data.latitude, hue=data.neighbourhood_group)
+<span style="color: #dcaeea;">neighbourhood_group_location_plot_fname</span> = <span style="color: #98be65;">'img/neighbourhood_group_location_plot.png'</span>
+plt.savefig(neighbourhood_group_location_plot_fname)
+neighbourhood_group_location_plot_fname
+
+</pre>
+</div>
+
+
+<div id="orgd971823" class="figure">
+<p><img src="img/neighbourhood_group_location_plot.png" alt="neighbourhood_group_location_plot.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org12fe6c7" class="outline-4">
+<h4 id="org12fe6c7"><span class="section-number-4">1.8.2.</span> neighbourhood</h4>
+<div class="outline-text-4" id="text-1-8-2">
+<div class="org-src-container">
+<pre class="src src-python">data.neighbourhood.value_counts()/<span style="color: #c678dd;">len</span>(data.neighbourhood)*<span style="color: #da8548; font-weight: bold;">100</span>
+</pre>
+</div>
+
+<pre class="example" id="org47b8af1">
+Williamsburg          8.017180
+Bedford-Stuyvesant    7.595869
+Harlem                5.436139
+Bushwick              5.041415
+Upper West Side       4.031087
+                        ...   
+Fort Wadsworth        0.002045
+Richmondtown          0.002045
+New Dorp              0.002045
+Rossville             0.002045
+Willowbrook           0.002045
+Name: neighbourhood, Length: 221, dtype: float64
+</pre>
+
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">15</span>,<span style="color: #da8548; font-weight: bold;">15</span>))
+sns.scatterplot(data.longitude,data.latitude,hue=data.neighbourhood)
+<span style="color: #dcaeea;">neighbourhood_location_plot_fname</span> = <span style="color: #98be65;">'img/neighbourhood_location_plot.png'</span>
+plt.savefig(neighbourhood_location_plot_fname)
+neighbourhood_location_plot_fname
+
+
+</pre>
+</div>
+
+
+<div id="orga7ee2d9" class="figure">
+<p><img src="img/neighbourhood_location_plot.png" alt="neighbourhood_location_plot.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org55b60d7" class="outline-4">
+<h4 id="org55b60d7"><span class="section-number-4">1.8.3.</span> room type</h4>
+<div class="outline-text-4" id="text-1-8-3">
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+sns.scatterplot(data.longitude,data.latitude,hue=data.room_type)
+<span style="color: #dcaeea;">room_type_location_plot_fname</span> = <span style="color: #98be65;">'img/room_type_location_plot.png'</span>
+plt.savefig(room_type_location_plot_fname)
+room_type_location_plot_fname
+</pre>
+</div>
+
+
+<div id="orgc6b7e84" class="figure">
+<p><img src="img/room_type_location_plot.png" alt="room_type_location_plot.png" />
+</p>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.hist(data.room_type)
+<span style="color: #dcaeea;">room_type_hist_plot_fname</span> = <span style="color: #98be65;">'img/room_type_hist_plot.png'</span>
+plt.savefig(room_type_hist_plot_fname)
+room_type_hist_plot_fname
+
+</pre>
+</div>
+
+
+<div id="org78cf15c" class="figure">
+<p><img src="img/room_type_hist_plot.png" alt="room_type_hist_plot.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.room_type.value_counts()/<span style="color: #c678dd;">len</span>(data.room_type)*<span style="color: #da8548; font-weight: bold;">100</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+Entire home/apt    51.966459
+Private room       45.661111
+Shared room         2.372431
+Name: room_type, dtype: float64
+</pre>
+
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+sns.countplot(data = data, x = <span style="color: #98be65;">'room_type'</span>, hue = <span style="color: #98be65;">'neighbourhood_group'</span>)
+<span style="color: #dcaeea;">room_type_on_neighbourhood_groups_fname</span> = <span style="color: #98be65;">'img/room_type_on_neighbourhood_groups.png'</span>
+plt.savefig(room_type_on_neighbourhood_groups_fname)
+room_type_on_neighbourhood_groups_fname
+</pre>
+</div>
+
+
+<div id="orge313600" class="figure">
+<p><img src="img/room_type_on_neighbourhood_groups.png" alt="room_type_on_neighbourhood_groups.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49b2312" class="outline-4">
+<h4 id="org49b2312"><span class="section-number-4">1.8.4.</span> availability 365</h4>
+<div class="outline-text-4" id="text-1-8-4">
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+sns.scatterplot(data.longitude,data.latitude,hue=data.availability_365)
+<span style="color: #dcaeea;">availability_365_location_plot_fname</span> = <span style="color: #98be65;">'img/availability_365_location_plot.png'</span>
+plt.savefig(availability_365_location_plot_fname)
+availability_365_location_plot_fname
+
+
+</pre>
+</div>
+
+
+<div id="orgf68d394" class="figure">
+<p><img src="img/availability_365_location_plot.png" alt="availability_365_location_plot.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9328d11" class="outline-3">
+<h3 id="org9328d11"><span class="section-number-3">1.9.</span> Analysis hosts</h3>
+<div class="outline-text-3" id="text-1-9">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">top_hosts</span> = data.host_id.value_counts().head(<span style="color: #da8548; font-weight: bold;">20</span>)
+<span style="color: #dcaeea;">top_hosts_data</span> = data[data.host_id.isin(top_hosts.index)]
+<span style="color: #dcaeea;">top_hosts_data.host_id</span> = top_hosts_data.host_id.<span style="color: #c678dd;">apply</span>(<span style="color: #c678dd;">str</span>)
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">25</span>,<span style="color: #da8548; font-weight: bold;">15</span>))
+sns.barplot(x = top_hosts.index, y = top_hosts.values)
+<span style="color: #dcaeea;">top_hosts_plot_fname</span> = <span style="color: #98be65;">'img/top_hosts_plot.png'</span>
+plt.savefig(top_hosts_plot_fname)
+top_hosts_plot_fname
+
+
+</pre>
+</div>
+
+
+<div id="org65ff1eb" class="figure">
+<p><img src="img/top_hosts_plot.png" alt="top_hosts_plot.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">15</span>,<span style="color: #da8548; font-weight: bold;">15</span>))
+sns.scatterplot(top_hosts_data.longitude,top_hosts_data.latitude,hue=top_hosts_data.host_id, style=top_hosts_data.neighbourhood_group )
+<span style="color: #dcaeea;">top_host_id_location_plot_fname</span> = <span style="color: #98be65;">'img/top_host_id_location_plot.png'</span>
+plt.savefig(top_host_id_location_plot_fname)
+top_host_id_location_plot_fname
+
+
+
+
+</pre>
+</div>
+
+
+<div id="orgd212494" class="figure">
+<p><img src="img/top_host_id_location_plot.png" alt="top_host_id_location_plot.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+sns.scatterplot(top_hosts_data.longitude,top_hosts_data.latitude,hue=top_hosts_data.price, style=top_hosts_data.neighbourhood_group )
+
+<span style="color: #dcaeea;">top_host_id_location_price_plot_fname</span> = <span style="color: #98be65;">'img/top_host_id_location_price_plot.png'</span>
+plt.savefig(top_host_id_location_price_plot_fname)
+top_host_id_location_price_plot_fname
+
+
+
+</pre>
+</div>
+
+
+<div id="org176d415" class="figure">
+<p><img src="img/top_host_id_location_price_plot.png" alt="top_host_id_location_price_plot.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c8e1b4" class="outline-3">
+<h3 id="org3c8e1b4"><span class="section-number-3">1.10.</span> Comments</h3>
+<div class="outline-text-3" id="text-1-10">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">most_reviews</span> = data.number_of_reviews.sort_values().tail(<span style="color: #da8548; font-weight: bold;">20</span>)
+<span style="color: #dcaeea;">most_reviews_data</span> = data[data.number_of_reviews.isin(most_reviews)]
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+
+plt.clf()
+sns.scatterplot(most_reviews_data.longitude,most_reviews_data.latitude,hue=most_reviews_data.price, style=most_reviews_data.neighbourhood_group, s=<span style="color: #da8548; font-weight: bold;">200</span>)
+
+<span style="color: #dcaeea;">most_reviews_data_location_price_plot_fname</span> = <span style="color: #98be65;">'img/most_reviews_data_location_price_plot.png'</span>
+plt.savefig(most_reviews_data_location_price_plot_fname)
+most_reviews_data_location_price_plot_fname
+
+
+
+
+</pre>
+</div>
+
+
+<div id="org56ef052" class="figure">
+<p><img src="img/most_reviews_data_location_price_plot.png" alt="most_reviews_data_location_price_plot.png" />
+</p>
+</div>
+
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">10</span>,<span style="color: #da8548; font-weight: bold;">8</span>))
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">loading the png NYC image found on Google and saving to my local folder along with the project</span>
+<span style="color: #dcaeea;">i</span>=<span style="color: #98be65;">'img/Neighbourhoods_New_York_City_Map.png'</span>
+<span style="color: #dcaeea;">nyc_img</span>=plt.imread(i)
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">scaling the image based on the latitude and longitude max and mins for proper output</span>
+plt.imshow(nyc_img,zorder=<span style="color: #da8548; font-weight: bold;">0</span>,extent=[-<span style="color: #da8548; font-weight: bold;">74.258</span>, -<span style="color: #da8548; font-weight: bold;">73.7</span>, <span style="color: #da8548; font-weight: bold;">40.49</span>,<span style="color: #da8548; font-weight: bold;">40.92</span>])
+<span style="color: #dcaeea;">ax</span>=plt.gca()
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">using scatterplot again</span>
+sns.scatterplot(most_reviews_data.longitude,most_reviews_data.latitude,hue=most_reviews_data.price,  ax=ax,style=most_reviews_data.number_of_reviews, s=<span style="color: #da8548; font-weight: bold;">150</span> )
+<span style="color: #dcaeea;">most_reviews_location_on_map_plot_fname</span> = <span style="color: #98be65;">'img/most_reviews_location_on_map_plot.png'</span>
+plt.savefig(most_reviews_location_on_map_plot_fname)
+most_reviews_location_on_map_plot_fname
+
+
+
+</pre>
+</div>
+
+
+<div id="org9afaecc" class="figure">
+<p><img src="img/most_reviews_location_on_map_plot.png" alt="most_reviews_location_on_map_plot.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5777c99" class="outline-3">
+<h3 id="org5777c99"><span class="section-number-3">1.11.</span> Hypothesis Tests</h3>
+<div class="outline-text-3" id="text-1-11">
+</div>
+<div id="outline-container-org01e1d87" class="outline-4">
+<h4 id="org01e1d87"><span class="section-number-4">1.11.1.</span> Manhattan price distribution is normal</h4>
+<div class="outline-text-4" id="text-1-11-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">Manhattan</span> = data[data.neighbourhood_group == <span style="color: #98be65;">'Manhattan'</span>]
+<span style="color: #dcaeea;">manhattan_data</span> = Manhattan.price
+<span style="color: #dcaeea;">stat</span>, <span style="color: #dcaeea;">p</span> = shapiro(manhattan_data)
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">'stat=%.3f, p=%.3f'</span> % (stat, p))
+<span style="color: #51afef;">if</span> p &gt; <span style="color: #da8548; font-weight: bold;">0.05</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably Gaussian'</span>)
+<span style="color: #51afef;">else</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably not Gaussian'</span>)
+</pre>
+</div>
+
+<pre class="example">
+stat=0.318, p=0.000
+Probably not Gaussian
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org048e838" class="outline-4">
+<h4 id="org048e838"><span class="section-number-4">1.11.2.</span> Staten Island price distribution is normal</h4>
+<div class="outline-text-4" id="text-1-11-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">Staten_Island</span> = data[data.neighbourhood_group == <span style="color: #98be65;">'Staten Island'</span>]
+<span style="color: #dcaeea;">staten_data</span> = Staten_Island.price
+<span style="color: #dcaeea;">stat</span>, <span style="color: #dcaeea;">p</span> = shapiro(staten_data)
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">'stat=%.3f, p=%.3f'</span> % (stat, p))
+<span style="color: #51afef;">if</span> p &gt; <span style="color: #da8548; font-weight: bold;">0.05</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably Gaussian'</span>)
+<span style="color: #51afef;">else</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably not Gaussian'</span>)
+
+
+</pre>
+</div>
+
+<pre class="example">
+stat=0.182, p=0.000
+Probably not Gaussian
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8dca33c" class="outline-4">
+<h4 id="org8dca33c"><span class="section-number-4">1.11.3.</span> top hosts and top host based on reviews are the same</h4>
+<div class="outline-text-4" id="text-1-11-3">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">stat</span>, <span style="color: #dcaeea;">p</span> = pearsonr(top_hosts.index, most_reviews_data.host_id)
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">'stat=%.3f, p=%.3f'</span> % (stat, p))
+<span style="color: #51afef;">if</span> p &gt; <span style="color: #da8548; font-weight: bold;">0.05</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably independent'</span>)
+<span style="color: #51afef;">else</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably dependent'</span>)
+
+
+</pre>
+</div>
+
+<pre class="example">
+stat=-0.076, p=0.749
+Probably independent
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga8553e8" class="outline-4">
+<h4 id="orga8553e8"><span class="section-number-4">1.11.4.</span> People spend same amount of money on Manhattan and Brooklyn</h4>
+<div class="outline-text-4" id="text-1-11-4">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">Manhattan</span> = data[data.neighbourhood_group == <span style="color: #98be65;">'Manhattan'</span>]
+<span style="color: #dcaeea;">manhattan</span> = Manhattan.sample(<span style="color: #da8548; font-weight: bold;">20104</span>)
+<span style="color: #dcaeea;">Brooklyn</span> = data[data.neighbourhood_group == <span style="color: #98be65;">'Brooklyn'</span>]
+<span style="color: #dcaeea;">stat</span>, <span style="color: #dcaeea;">p</span> = pearsonr(manhattan.price, Brooklyn.price)
+
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">'stat=%.3f, p=%.3f'</span> % (stat, p))
+<span style="color: #51afef;">if</span> p &gt; <span style="color: #da8548; font-weight: bold;">0.05</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably independent'</span>)
+<span style="color: #51afef;">else</span>:
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">'Probably dependent'</span>)
+
+
+</pre>
+</div>
+
+<pre class="example">
+stat=0.001, p=0.835
+Probably independent
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgc5a0807" class="outline-4">
+<h4 id="orgc5a0807"><span class="section-number-4">1.11.5.</span> relation between all year availability with price</h4>
+<div class="outline-text-4" id="text-1-11-5">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">from</span> scipy.stats <span style="color: #51afef;">import</span> ttest_rel
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">add_all_year_availability</span>(availability_365):
+
+    <span style="color: #51afef;">if</span> availability_365 == <span style="color: #da8548; font-weight: bold;">365</span>:
+        <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">1</span>
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>
+
+<span style="color: #dcaeea;">data</span>[<span style="color: #98be65;">'All_Year_Availability'</span>] = data.availability_365.<span style="color: #c678dd;">apply</span>(add_all_year_availability)
+<span style="color: #51afef;">print</span>(ttest_rel(data.All_Year_Availability, data.price))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+Ttest_relResult(statistic=-140.5996044431853, pvalue=0.0)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f4c399" class="outline-3">
+<h3 id="org6f4c399"><span class="section-number-3">1.12.</span> Predict Price</h3>
+<div class="outline-text-3" id="text-1-12">
+</div>
+<div id="outline-container-org5644254" class="outline-4">
+<h4 id="org5644254"><span class="section-number-4">1.12.1.</span> Prepare Data for model</h4>
+<div class="outline-text-4" id="text-1-12-1">
+</div>
+<ol class="org-ol">
+<li><a id="org935c0cf"></a>clean price data<br />
+<div class="outline-text-5" id="text-1-12-1-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">model_data</span> = data[data[<span style="color: #98be65;">'price'</span>]&lt;= data[<span style="color: #98be65;">'price'</span>].mean() + <span style="color: #da8548; font-weight: bold;">3</span>*data[<span style="color: #98be65;">'price'</span>].std()]
+
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org60e1062"></a>drop columns that are not necessary for model training<br />
+<div class="outline-text-5" id="text-1-12-1-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">model_data</span> = data.drop([<span style="color: #98be65;">'host_id'</span>, <span style="color: #98be65;">'latitude'</span>,<span style="color: #98be65;">'longitude'</span>,<span style="color: #98be65;">'neighbourhood'</span>,<span style="color: #98be65;">'number_of_reviews'</span>,<span style="color: #98be65;">'reviews_per_month'</span>,<span style="color: #98be65;">'name'</span>,<span style="color: #98be65;">'id'</span>,<span style="color: #98be65;">'host_name'</span>,<span style="color: #98be65;">'last_review'</span>, <span style="color: #98be65;">'All_Year_Availability'</span>], axis=<span style="color: #da8548; font-weight: bold;">1</span>)
+
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orga20968d"></a>Encode data<br />
+<div class="outline-text-5" id="text-1-12-1-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">encode</span>(data):
+    <span style="color: #51afef;">for</span> column <span style="color: #51afef;">in</span> data.columns[data.columns.isin([<span style="color: #98be65;">'neighbourhood_group'</span>, <span style="color: #98be65;">'room_type'</span>])]:
+        <span style="color: #dcaeea;">data</span>[column] = data[column].factorize()[<span style="color: #da8548; font-weight: bold;">0</span>]
+    <span style="color: #51afef;">return</span> data
+
+<span style="color: #dcaeea;">model_data_encoded</span> = encode(model_data.copy())
+
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf4c0754" class="outline-4">
+<h4 id="orgf4c0754"><span class="section-number-4">1.12.2.</span> spilit data</h4>
+<div class="outline-text-4" id="text-1-12-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1877069"></a>set data to X , Y<br />
+<div class="outline-text-5" id="text-1-12-2-1">
+<ul class="org-ul">
+<li>we use neighbourhood group  room type  minimum nights  calculated host listings count  availability 365 to predict price</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">x</span> = model_data_encoded.iloc[:,[<span style="color: #da8548; font-weight: bold;">0</span>,<span style="color: #da8548; font-weight: bold;">1</span>,<span style="color: #da8548; font-weight: bold;">3</span>,<span style="color: #da8548; font-weight: bold;">4</span>,<span style="color: #da8548; font-weight: bold;">5</span>]]
+<span style="color: #dcaeea;">y</span> = model_data_encoded.iloc[:,[<span style="color: #da8548; font-weight: bold;">2</span>]]
+
+
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org8e442fa"></a>set data to training and test<br />
+<div class="outline-text-5" id="text-1-12-2-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">x_train</span>,<span style="color: #dcaeea;">x_test</span>,<span style="color: #dcaeea;">y_train</span>,<span style="color: #dcaeea;">y_test</span>=train_test_split(x,y,test_size=.<span style="color: #da8548; font-weight: bold;">1</span>,random_state=<span style="color: #da8548; font-weight: bold;">353</span>)
+
+
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org3dc739a" class="outline-4">
+<h4 id="org3dc739a"><span class="section-number-4">1.12.3.</span> model</h4>
+<div class="outline-text-4" id="text-1-12-3">
+</div>
+<ol class="org-ol">
+<li><a id="org35c683b"></a>fit model<br />
+<div class="outline-text-5" id="text-1-12-3-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">linear_model</span> = LinearRegression()
+linear_model.fit(x_train,y_train)
+
+
+</pre>
+</div>
+
+<pre class="example">
+LinearRegression()
+</pre>
+</div>
+</li>
+
+<li><a id="org867636d"></a>test model<br />
+<div class="outline-text-5" id="text-1-12-3-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">y_pred</span> = linear_model.predict(x_test)
+r2_score(y_test,y_pred)
+
+</pre>
+</div>
+
+<pre class="example">
+0.07480306392848757
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="outline-container-org59fb39e" class="outline-2">
+<h2 id="org59fb39e"><span class="section-number-2">2.</span> Apartment rental offers in Germany</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+
+<div id="outline-container-orge24d968" class="outline-3">
+<h3 id="orge24d968"><span class="section-number-3">2.1.</span> import libraries</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">import</span> time
+<span style="color: #51afef;">import</span> warnings
+<span style="color: #51afef;">import</span> pandas <span style="color: #51afef;">as</span> pd
+<span style="color: #51afef;">import</span> numpy <span style="color: #51afef;">as</span> np
+<span style="color: #51afef;">import</span> matplotlib.pyplot <span style="color: #51afef;">as</span> plt
+<span style="color: #51afef;">import</span> seaborn <span style="color: #51afef;">as</span> sns
+<span style="color: #51afef;">from</span> sklearn.linear_model <span style="color: #51afef;">import</span> LinearRegression
+<span style="color: #51afef;">from</span> sklearn.model_selection <span style="color: #51afef;">import</span> train_test_split
+<span style="color: #51afef;">from</span> sklearn.metrics <span style="color: #51afef;">import</span> r2_score
+<span style="color: #51afef;">import</span> multiprocessing <span style="color: #51afef;">as</span> mp
+<span style="color: #51afef;">import</span> dask
+<span style="color: #51afef;">import</span> dask.dataframe <span style="color: #51afef;">as</span> dd
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org94ac570" class="outline-3">
+<h3 id="org94ac570"><span class="section-number-3">2.2.</span> config packages</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-python">warnings.filterwarnings(<span style="color: #98be65;">"ignore"</span>)
+
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">pd.set_option("display.max_columns", None)</span>
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">pd.set_option("display.max_rows", None)</span>
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org7526adb" class="outline-3">
+<h3 id="org7526adb"><span class="section-number-3">2.3.</span> read data</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">raw_data</span> = pd.read_csv(<span style="color: #98be65;">'immo_data.csv'</span>)
+raw_data.info()
+
+</pre>
+</div>
+
+<pre class="example" id="orga8d7bb0">
+ &lt;class 'pandas.core.frame.DataFrame'&gt;
+ RangeIndex: 268850 entries, 0 to 268849
+ Data columns (total 49 columns):
+  #   Column                    Non-Null Count   Dtype  
+ ---  ------                    --------------   -----  
+  0   regio1                    268850 non-null  object 
+  1   serviceCharge             261941 non-null  float64
+  2   heatingType               223994 non-null  object 
+  3   telekomTvOffer            236231 non-null  object 
+  4   telekomHybridUploadSpeed  45020 non-null   float64
+  5   newlyConst                268850 non-null  bool   
+  6   balcony                   268850 non-null  bool   
+  7   picturecount              268850 non-null  int64  
+  8   pricetrend                267018 non-null  float64
+  9   telekomUploadSpeed        235492 non-null  float64
+  10  totalRent                 228333 non-null  float64
+  11  yearConstructed           211805 non-null  float64
+  12  scoutId                   268850 non-null  int64  
+  13  noParkSpaces              93052 non-null   float64
+  14  firingTypes               211886 non-null  object 
+  15  hasKitchen                268850 non-null  bool   
+  16  geo_bln                   268850 non-null  object 
+  17  cellar                    268850 non-null  bool   
+  18  yearConstructedRange      211805 non-null  float64
+  19  baseRent                  268850 non-null  float64
+  20  houseNumber               197832 non-null  object 
+  21  livingSpace               268850 non-null  float64
+  22  geo_krs                   268850 non-null  object 
+  23  condition                 200361 non-null  object 
+  24  interiorQual              156185 non-null  object 
+  25  petsAllowed               154277 non-null  object 
+  26  street                    268850 non-null  object 
+  27  streetPlain               197837 non-null  object 
+  28  lift                      268850 non-null  bool   
+  29  baseRentRange             268850 non-null  int64  
+  30  typeOfFlat                232236 non-null  object 
+  31  geo_plz                   268850 non-null  int64  
+  32  noRooms                   268850 non-null  float64
+  33  thermalChar               162344 non-null  float64
+  34  floor                     217541 non-null  float64
+  35  numberOfFloors            171118 non-null  float64
+  36  noRoomsRange              268850 non-null  int64  
+  37  garden                    268850 non-null  bool   
+  38  livingSpaceRange          268850 non-null  int64  
+  39  regio2                    268850 non-null  object 
+  40  regio3                    268850 non-null  object 
+  41  description               249103 non-null  object 
+  42  facilities                215926 non-null  object 
+  43  heatingCosts              85518 non-null   float64
+  44  energyEfficiencyClass     77787 non-null   object 
+  45  lastRefurbish             80711 non-null   float64
+  46  electricityBasePrice      46846 non-null   float64
+  47  electricityKwhPrice       46846 non-null   float64
+  48  date                      268850 non-null  object 
+ dtypes: bool(6), float64(18), int64(6), object(19)
+ memory usage: 89.7+ MB
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8f655c8" class="outline-3">
+<h3 id="org8f655c8"><span class="section-number-3">2.4.</span> handling missing values &amp; cleaning data</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org6e931c2" class="outline-4">
+<h4 id="org6e931c2"><span class="section-number-4">2.4.1.</span> null data</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.isnull().<span style="color: #c678dd;">sum</span>())
+
+</pre>
+</div>
+
+<pre class="example" id="org6b34113">
+regio1                           0
+serviceCharge                 6909
+heatingType                  44856
+telekomTvOffer               32619
+telekomHybridUploadSpeed    223830
+newlyConst                       0
+balcony                          0
+picturecount                     0
+pricetrend                    1832
+telekomUploadSpeed           33358
+totalRent                    40517
+yearConstructed              57045
+scoutId                          0
+noParkSpaces                175798
+firingTypes                  56964
+hasKitchen                       0
+geo_bln                          0
+cellar                           0
+yearConstructedRange         57045
+baseRent                         0
+houseNumber                  71018
+livingSpace                      0
+geo_krs                          0
+condition                    68489
+interiorQual                112665
+petsAllowed                 114573
+street                           0
+streetPlain                  71013
+lift                             0
+baseRentRange                    0
+typeOfFlat                   36614
+geo_plz                          0
+noRooms                          0
+thermalChar                 106506
+floor                        51309
+numberOfFloors               97732
+noRoomsRange                     0
+garden                           0
+livingSpaceRange                 0
+regio2                           0
+regio3                           0
+description                  19747
+facilities                   52924
+heatingCosts                183332
+energyEfficiencyClass       191063
+lastRefurbish               188139
+electricityBasePrice        222004
+electricityKwhPrice         222004
+date                             0
+dtype: int64
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(raw_data.isnull().<span style="color: #c678dd;">sum</span>()/<span style="color: #c678dd;">len</span>(raw_data))
+
+
+</pre>
+</div>
+
+<pre class="example" id="orgf93519f">
+regio1                      0.000000
+serviceCharge               0.025698
+heatingType                 0.166844
+telekomTvOffer              0.121328
+telekomHybridUploadSpeed    0.832546
+newlyConst                  0.000000
+balcony                     0.000000
+picturecount                0.000000
+pricetrend                  0.006814
+telekomUploadSpeed          0.124077
+totalRent                   0.150705
+yearConstructed             0.212182
+scoutId                     0.000000
+noParkSpaces                0.653889
+firingTypes                 0.211880
+hasKitchen                  0.000000
+geo_bln                     0.000000
+cellar                      0.000000
+yearConstructedRange        0.212182
+baseRent                    0.000000
+houseNumber                 0.264155
+livingSpace                 0.000000
+geo_krs                     0.000000
+condition                   0.254748
+interiorQual                0.419063
+petsAllowed                 0.426160
+street                      0.000000
+streetPlain                 0.264136
+lift                        0.000000
+baseRentRange               0.000000
+typeOfFlat                  0.136187
+geo_plz                     0.000000
+noRooms                     0.000000
+thermalChar                 0.396154
+floor                       0.190846
+numberOfFloors              0.363519
+noRoomsRange                0.000000
+garden                      0.000000
+livingSpaceRange            0.000000
+regio2                      0.000000
+regio3                      0.000000
+description                 0.073450
+facilities                  0.196853
+heatingCosts                0.681912
+energyEfficiencyClass       0.710668
+lastRefurbish               0.699792
+electricityBasePrice        0.825754
+electricityKwhPrice         0.825754
+date                        0.000000
+dtype: float64
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org36a8fc5" class="outline-4">
+<h4 id="org36a8fc5"><span class="section-number-4">2.4.2.</span> delete columns with more than %50 missing values</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">raw_data</span> = raw_data.drop(columns=raw_data.columns[((raw_data.isnull().<span style="color: #c678dd;">sum</span>()/<span style="color: #c678dd;">len</span>(raw_data)) &gt; <span style="color: #da8548; font-weight: bold;">0.50</span>)])
+
+raw_data.columns
+
+
+</pre>
+</div>
+
+<pre class="example" id="org43537ac">
+Index(['regio1', 'serviceCharge', 'heatingType', 'telekomTvOffer',
+       'newlyConst', 'balcony', 'picturecount', 'pricetrend',
+       'telekomUploadSpeed', 'totalRent', 'yearConstructed', 'scoutId',
+       'firingTypes', 'hasKitchen', 'geo_bln', 'cellar',
+       'yearConstructedRange', 'baseRent', 'houseNumber', 'livingSpace',
+       'geo_krs', 'condition', 'interiorQual', 'petsAllowed', 'street',
+       'streetPlain', 'lift', 'baseRentRange', 'typeOfFlat', 'geo_plz',
+       'noRooms', 'thermalChar', 'floor', 'numberOfFloors', 'noRoomsRange',
+       'garden', 'livingSpaceRange', 'regio2', 'regio3', 'description',
+       'facilities', 'date'],
+      dtype='object')
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org90e46e9" class="outline-4">
+<h4 id="org90e46e9"><span class="section-number-4">2.4.3.</span> delete columns that are not usefull</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">raw_data</span> = raw_data.drop(columns=[<span style="color: #98be65;">'livingSpaceRange'</span>,<span style="color: #98be65;">'street'</span>,<span style="color: #98be65;">'description'</span>,<span style="color: #98be65;">'facilities'</span>,<span style="color: #98be65;">'geo_krs'</span>,<span style="color: #98be65;">'geo_plz'</span>,<span style="color: #98be65;">'scoutId'</span>,<span style="color: #98be65;">'regio1'</span>,<span style="color: #98be65;">'telekomUploadSpeed'</span>,<span style="color: #98be65;">'telekomTvOffer'</span>,<span style="color: #98be65;">'pricetrend'</span>,<span style="color: #98be65;">'regio3'</span>,<span style="color: #98be65;">'noRoomsRange'</span>,<span style="color: #98be65;">'picturecount'</span>,<span style="color: #98be65;">'geo_bln'</span>,<span style="color: #98be65;">'date'</span>,<span style="color: #98be65;">'houseNumber'</span>,<span style="color: #98be65;">'streetPlain'</span>,<span style="color: #98be65;">'firingTypes'</span>,<span style="color: #98be65;">'yearConstructedRange'</span>])
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+raw_data.info()
+
+</pre>
+</div>
+
+<pre class="example" id="orgbc49f0d">
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 268850 entries, 0 to 268849
+Data columns (total 22 columns):
+ #   Column           Non-Null Count   Dtype  
+---  ------           --------------   -----  
+ 0   serviceCharge    261941 non-null  float64
+ 1   heatingType      223994 non-null  object 
+ 2   newlyConst       268850 non-null  bool   
+ 3   balcony          268850 non-null  bool   
+ 4   totalRent        228333 non-null  float64
+ 5   yearConstructed  211805 non-null  float64
+ 6   hasKitchen       268850 non-null  bool   
+ 7   cellar           268850 non-null  bool   
+ 8   baseRent         268850 non-null  float64
+ 9   livingSpace      268850 non-null  float64
+ 10  condition        200361 non-null  object 
+ 11  interiorQual     156185 non-null  object 
+ 12  petsAllowed      154277 non-null  object 
+ 13  lift             268850 non-null  bool   
+ 14  baseRentRange    268850 non-null  int64  
+ 15  typeOfFlat       232236 non-null  object 
+ 16  noRooms          268850 non-null  float64
+ 17  thermalChar      162344 non-null  float64
+ 18  floor            217541 non-null  float64
+ 19  numberOfFloors   171118 non-null  float64
+ 20  garden           268850 non-null  bool   
+ 21  regio2           268850 non-null  object 
+dtypes: bool(6), float64(9), int64(1), object(6)
+memory usage: 34.4+ MB
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orge3762b9" class="outline-4">
+<h4 id="orge3762b9"><span class="section-number-4">2.4.4.</span> delete unusal data</h4>
+<div class="outline-text-4" id="text-2-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="org671bc54"></a>livingspace<br />
+<div class="outline-text-5" id="text-2-4-4-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">unusal_livingspace_data</span> = raw_data[raw_data.livingSpace == <span style="color: #da8548; font-weight: bold;">0</span>]
+raw_data.drop(unusal_livingspace_data.index,axis=<span style="color: #da8548; font-weight: bold;">0</span>, inplace=<span style="color: #a9a1e1;">True</span>)
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org50ec562"></a>totalrent<br />
+<div class="outline-text-5" id="text-2-4-4-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">unusal_totalrent_data</span> = raw_data[raw_data.totalRent == <span style="color: #da8548; font-weight: bold;">0</span>]
+raw_data.drop(unusal_totalrent_data.index,axis=<span style="color: #da8548; font-weight: bold;">0</span>, inplace=<span style="color: #a9a1e1;">True</span>)
+
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org76c0041"></a>baseRent<br />
+<div class="outline-text-5" id="text-2-4-4-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">unusal_baseRent_data</span> = raw_data[raw_data.baseRent == <span style="color: #da8548; font-weight: bold;">0</span>]
+raw_data.drop(unusal_baseRent_data.index,axis=<span style="color: #da8548; font-weight: bold;">0</span>, inplace=<span style="color: #a9a1e1;">True</span>)
+
+
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+
+<div id="outline-container-orgd04e903" class="outline-4">
+<h4 id="orgd04e903"><span class="section-number-4">2.4.5.</span> fill numeric data with mean</h4>
+<div class="outline-text-4" id="text-2-4-5">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">data</span> = raw_data.fillna(raw_data._get_numeric_data().mean())
+
+<span style="color: #51afef;">print</span>(data.isnull().<span style="color: #c678dd;">sum</span>())
+
+</pre>
+</div>
+
+<pre class="example" id="orgdc49fea">
+serviceCharge           0
+heatingType         44809
+newlyConst              0
+balcony                 0
+totalRent               0
+yearConstructed         0
+hasKitchen              0
+cellar                  0
+baseRent                0
+livingSpace             0
+condition           68310
+interiorQual       112441
+petsAllowed        114369
+lift                    0
+baseRentRange           0
+typeOfFlat          36585
+noRooms                 0
+thermalChar             0
+floor                   0
+numberOfFloors          0
+garden                  0
+regio2                  0
+dtype: int64
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgac96fab" class="outline-4">
+<h4 id="orgac96fab"><span class="section-number-4">2.4.6.</span> categorical data with lots of states</h4>
+<div class="outline-text-4" id="text-2-4-6">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">get_categorical_data</span>(data):
+    <span style="color: #dcaeea;">categorical_cols</span> = []
+    <span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> data.columns:
+        <span style="color: #51afef;">if</span> data[col].dtype == <span style="color: #98be65;">'object'</span> <span style="color: #51afef;">or</span> data[col].dtype == <span style="color: #98be65;">'bool'</span>:
+            categorical_cols.append(col)
+            <span style="color: #51afef;">print</span>(f<span style="color: #98be65;">'col : {col} , unique values : {data[col].nunique()}'</span>)
+    <span style="color: #51afef;">return</span> categorical_cols
+
+
+get_categorical_data(data)
+
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">get_crowded_categorical_data_columns</span>(data):
+    <span style="color: #dcaeea;">list_of_crowded_cols</span> = []
+    <span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> data.columns:
+        <span style="color: #51afef;">if</span> data[col].dtype == <span style="color: #98be65;">'object'</span> <span style="color: #51afef;">or</span> data[col].dtype == <span style="color: #98be65;">'bool'</span>:
+            <span style="color: #51afef;">if</span> data[col].nunique() &gt; <span style="color: #da8548; font-weight: bold;">5</span>:
+                list_of_crowded_cols.append(col)
+    <span style="color: #51afef;">return</span> list_of_crowded_cols
+
+</pre>
+</div>
+
+<pre class="example" id="org2a6b464">
+col : heatingType , unique values : 13
+col : newlyConst , unique values : 2
+col : balcony , unique values : 2
+col : hasKitchen , unique values : 2
+col : cellar , unique values : 2
+col : condition , unique values : 10
+col : interiorQual , unique values : 4
+col : petsAllowed , unique values : 3
+col : lift , unique values : 2
+col : typeOfFlat , unique values : 10
+col : garden , unique values : 2
+col : regio2 , unique values : 419
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgfd0bf89" class="outline-4">
+<h4 id="orgfd0bf89"><span class="section-number-4">2.4.7.</span> fill categorical data with other</h4>
+<div class="outline-text-4" id="text-2-4-7">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">categorical_cols</span> = get_categorical_data(data)
+<span style="color: #dcaeea;">crowded_cols</span> = get_crowded_categorical_data_columns(data)
+<span style="color: #51afef;">print</span>(cols)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> categorical_cols:
+    data[col].fillna(<span style="color: #98be65;">"other"</span>, inplace=<span style="color: #a9a1e1;">True</span>)
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.isnull().<span style="color: #c678dd;">sum</span>())
+
+</pre>
+</div>
+
+<pre class="example" id="org4f327ba">
+serviceCharge      0
+heatingType        0
+newlyConst         0
+balcony            0
+totalRent          0
+yearConstructed    0
+hasKitchen         0
+cellar             0
+baseRent           0
+livingSpace        0
+condition          0
+interiorQual       0
+petsAllowed        0
+lift               0
+baseRentRange      0
+typeOfFlat         0
+noRooms            0
+thermalChar        0
+floor              0
+numberOfFloors     0
+garden             0
+regio2             0
+dtype: int64
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org4df2695" class="outline-4">
+<h4 id="org4df2695"><span class="section-number-4">2.4.8.</span> reduce number of categories</h4>
+<div class="outline-text-4" id="text-2-4-8">
+<div class="org-src-container">
+<pre class="src src-python">
+get_categorical_data(data)
+<span style="color: #dcaeea;">crowded_cols</span> = get_crowded_categorical_data_columns(data)
+<span style="color: #51afef;">print</span>(crowded_cols)
+
+
+
+
+
+
+</pre>
+</div>
+
+<pre class="example" id="orgcc7712d">
+col : heatingType , unique values : 14
+col : newlyConst , unique values : 2
+col : balcony , unique values : 2
+col : hasKitchen , unique values : 2
+col : cellar , unique values : 2
+col : condition , unique values : 11
+col : interiorQual , unique values : 5
+col : petsAllowed , unique values : 4
+col : lift , unique values : 2
+col : typeOfFlat , unique values : 10
+col : garden , unique values : 2
+col : regio2 , unique values : 419
+['heatingType', 'condition', 'typeOfFlat', 'regio2']
+</pre>
+</div>
+
+<ol class="org-ol">
+<li><a id="org42ede67"></a>reduce category func<br />
+<div class="outline-text-5" id="text-2-4-8-1">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">reduce_category</span>(cat):
+
+    <span style="color: #51afef;">if</span> cat <span style="color: #51afef;">in</span> change_to_other:
+        <span style="color: #51afef;">return</span> <span style="color: #98be65;">'other'</span>
+    <span style="color: #51afef;">return</span> cat
+
+
+
+
+
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org4a9b60e"></a>heatingType<br />
+<div class="outline-text-5" id="text-2-4-8-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.heatingType.value_counts()/<span style="color: #c678dd;">len</span>(data.heatingType)*<span style="color: #da8548; font-weight: bold;">100</span>)
+</pre>
+</div>
+
+<pre class="example" id="org1caa6c6">
+central_heating                   47.956569
+other                             16.690505
+district_heating                   9.233061
+gas_heating                        7.428763
+self_contained_central_heating     7.094647
+floor_heating                      6.587328
+oil_heating                        1.876932
+heat_pump                          1.017618
+combined_heat_and_power_plant      0.736395
+night_storage_heater               0.496517
+wood_pellet_heating                0.357954
+electric_heating                   0.334861
+stove_heating                      0.127016
+solar_heating                      0.061832
+Name: heatingType, dtype: float64
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">change_to_other</span> = data.heatingType.value_counts().tail().index
+<span style="color: #dcaeea;">data.heatingType</span> = data.heatingType.<span style="color: #c678dd;">apply</span>(reduce_category)
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org59ef8f6"></a>condition<br />
+<div class="outline-text-5" id="text-2-4-8-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.condition.value_counts()/<span style="color: #c678dd;">len</span>(data.condition)*<span style="color: #da8548; font-weight: bold;">100</span>)
+
+
+</pre>
+</div>
+
+<pre class="example" id="org1826f5f">
+other                                 25.444184
+well_kept                             24.772228
+refurbished                           10.040600
+fully_renovated                        9.811897
+first_time_use                         8.172980
+mint_condition                         8.164041
+modernized                             6.408910
+first_time_use_after_refurbishment     5.839759
+negotiable                             0.833985
+need_of_renovation                     0.509927
+ripe_for_demolition                    0.001490
+Name: condition, dtype: float64
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">change_to_other</span> = data.condition.value_counts().tail(<span style="color: #da8548; font-weight: bold;">3</span>).index
+<span style="color: #dcaeea;">data.condition</span> = data.condition.<span style="color: #c678dd;">apply</span>(reduce_category)
+
+
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org6f56da9"></a>typeOfFlat<br />
+<div class="outline-text-5" id="text-2-4-8-4">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.typeOfFlat.value_counts()/<span style="color: #c678dd;">len</span>(data.typeOfFlat)*<span style="color: #da8548; font-weight: bold;">100</span>)
+
+</pre>
+</div>
+
+<pre class="example" id="orgc7b411c">
+apartment              48.920177
+other                  17.160577
+roof_storey            12.935524
+ground_floor           11.726450
+maisonette              3.468916
+raised_ground_floor     2.095206
+penthouse               1.328268
+terraced_flat           1.260476
+half_basement           0.748687
+loft                    0.355719
+Name: typeOfFlat, dtype: float64
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">change_to_other</span> = data.typeOfFlat.value_counts().tail(<span style="color: #da8548; font-weight: bold;">2</span>).index
+<span style="color: #dcaeea;">data.typeOfFlat</span> = data.condition.<span style="color: #c678dd;">apply</span>(reduce_category)
+
+
+
+</pre>
+</div>
+
+<pre class="example" id="org058881c">
+apartment              48.920216
+other                  17.159383
+roof_storey            12.939185
+ground_floor           11.730705
+maisonette              3.466245
+raised_ground_floor     2.093361
+penthouse               1.327134
+terraced_flat           1.259066
+half_basement           0.748745
+loft                    0.355961
+Name: typeOfFlat, dtype: float64
+</pre>
+</div>
+</li>
+
+
+<li><a id="orga22a668"></a>regio2<br />
+<div class="outline-text-5" id="text-2-4-8-5">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">print</span>(data.regio2.value_counts()/<span style="color: #c678dd;">len</span>(data.regio2)*<span style="color: #da8548; font-weight: bold;">100</span>)
+
+</pre>
+</div>
+
+<pre class="example" id="org1aa4b42">
+Leipzig                         5.110441
+Chemnitz                        4.680597
+Berlin                          3.874921
+Dresden                         2.800685
+Magdeburg                       1.809886
+                                  ...   
+Lichtenfels_Kreis               0.011547
+Freyung_Grafenau_Kreis          0.011174
+Haßberge_Kreis                  0.008940
+Neustadt_a.d._Waldnaab_Kreis    0.005960
+Kronach_Kreis                   0.004470
+Name: regio2, Length: 419, dtype: float64
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">change_to_other</span> = data.regio2.value_counts().tail(<span style="color: #da8548; font-weight: bold;">399</span>).index
+<span style="color: #dcaeea;">data.regio2</span> = data.regio2.<span style="color: #c678dd;">apply</span>(reduce_category)
+
+</pre>
+</div>
+
+<pre class="example" id="org53a18ff">
+other                                     45.760089
+Leipzig                                    5.104333
+Chemnitz                                   4.677329
+Berlin                                     3.870560
+Dresden                                    2.797843
+Magdeburg                                  1.807699
+Halle_Saale                                1.697973
+München                                    1.630277
+Essen                                      1.618375
+Frankfurt_am_Main                          1.597917
+Hamburg                                    1.398177
+Düsseldorf                                 1.380324
+Duisburg                                   1.310024
+Mittelsachsen_Kreis                        1.176121
+Dortmund                                   1.166822
+Gelsenkirchen                              1.094662
+Recklinghausen_Kreis                       1.024363
+Köln                                       1.007625
+Zwickau                                    0.943277
+Wuppertal                                  0.883764
+Zwickau_Kreis                              0.863307
+Leipzig_Kreis                              0.861819
+Meißen_Kreis                               0.822020
+Sächsische_Schweiz_Osterzgebirge_Kreis     0.772922
+Bochum                                     0.746513
+Bremen                                     0.735354
+Gera                                       0.734238
+Plauen                                     0.733123
+Aachen                                     0.702622
+Erzgebirgskreis                            0.683653
+Nürnberg                                   0.666543
+Stuttgart                                  0.665055
+Hannover                                   0.643853
+Wiesbaden                                  0.631951
+Saalekreis                                 0.621536
+Märkischer_Kreis                           0.576902
+Bautzen_Kreis                              0.572810
+Mettmann_Kreis                             0.555700
+Burgenlandkreis                            0.554212
+Hagen                                      0.534499
+Ennepe_Ruhr_Kreis                          0.519993
+Mannheim                                   0.513297
+Mönchengladbach                            0.509206
+Krefeld                                    0.499163
+Bonn                                       0.491352
+Harz_Kreis                                 0.483541
+Dessau_Roßlau                              0.473498
+Erfurt                                     0.445974
+Rhein_Sieg_Kreis                           0.437791
+Name: regio2, dtype: float64
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-org72b5195" class="outline-3">
+<h3 id="org72b5195"><span class="section-number-3">2.5.</span> Clean duplicates</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgb50f07f" class="outline-4">
+<h4 id="orgb50f07f"><span class="section-number-4">2.5.1.</span> remove duplicates</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ul class="org-ul">
+<li>remove duplicates from dataset</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+data.drop_duplicates(inplace=<span style="color: #a9a1e1;">True</span>)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org097fc3a" class="outline-3">
+<h3 id="org097fc3a"><span class="section-number-3">2.6.</span> Handle Outliers</h3>
+<div class="outline-text-3" id="text-2-6">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> data.columns:
+    <span style="color: #51afef;">if</span> data[col].dtype == <span style="color: #98be65;">'int64'</span> <span style="color: #51afef;">or</span> data[col].dtype == <span style="color: #98be65;">'float64'</span>:
+        <span style="color: #dcaeea;">upper_range</span> = data[col].mean() + <span style="color: #da8548; font-weight: bold;">3</span> * data[col].std()
+        <span style="color: #dcaeea;">lower_range</span> = data[col].mean() - <span style="color: #da8548; font-weight: bold;">3</span> * data[col].std()
+
+        <span style="color: #dcaeea;">indexs</span> = data[(data[col] &gt; upper_range) | (data[col] &lt; lower_range)].index
+        <span style="color: #dcaeea;">data</span> = data.drop(indexs)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc408b1e" class="outline-3">
+<h3 id="orgc408b1e"><span class="section-number-3">2.7.</span> Visual data</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-org2173419" class="outline-4">
+<h4 id="org2173419"><span class="section-number-4">2.7.1.</span> regio2 top 13</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.regio2.value_counts()/<span style="color: #c678dd;">len</span>(data)*<span style="color: #da8548; font-weight: bold;">100</span>)
+<span style="color: #dcaeea;">regio2_data</span> = data.regio2.value_counts()
+
+</pre>
+</div>
+
+<pre class="example" id="orgacecf1e">
+other                   63.127229
+Leipzig                  5.104062
+Chemnitz                 4.599483
+Berlin                   3.871552
+Dresden                  2.793639
+Magdeburg                1.813224
+Halle_Saale              1.671833
+München                  1.656295
+Essen                    1.615121
+Frankfurt_am_Main        1.549475
+Hamburg                  1.395654
+Düsseldorf               1.393324
+Duisburg                 1.301264
+Dortmund                 1.178906
+Mittelsachsen_Kreis      1.150939
+Gelsenkirchen            1.070921
+Köln                     1.013044
+Recklinghausen_Kreis     1.011878
+Zwickau                  0.943513
+Wuppertal                0.895347
+Leipzig_Kreis            0.843297
+Name: regio2, dtype: float64
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">15</span>,<span style="color: #da8548; font-weight: bold;">15</span>))
+sns.barplot(x=regio2_data.index[<span style="color: #da8548; font-weight: bold;">1</span>:<span style="color: #da8548; font-weight: bold;">14</span>], y=regio2_data.values[<span style="color: #da8548; font-weight: bold;">1</span>:<span style="color: #da8548; font-weight: bold;">14</span>])
+<span style="color: #dcaeea;">regio2_plot_fname</span> = <span style="color: #98be65;">'img/regio2_plot.png'</span>
+plt.savefig(regio2_plot_fname)
+regio2_plot_fname
+
+</pre>
+</div>
+
+
+<div id="org293fe98" class="figure">
+<p><img src="img/regio2_plot.png" alt="regio2_plot.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org53c9f83" class="outline-4">
+<h4 id="org53c9f83"><span class="section-number-4">2.7.2.</span> livingSpace</h4>
+<div class="outline-text-4" id="text-2-7-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.livingSpace.value_counts())
+
+</pre>
+</div>
+
+<pre class="example" id="org07bada0">
+60.00     4979
+70.00     4008
+80.00     3892
+65.00     3653
+75.00     3572
+          ... 
+140.05       1
+128.60       1
+166.70       1
+128.43       1
+158.35       1
+Name: livingSpace, Length: 12907, dtype: int64
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+<span style="color: #dcaeea;">livingSpace_chart_data</span> = data.livingSpace.value_counts()
+plt.scatter(x=livingSpace_chart_data.index, y=livingSpace_chart_data.values)
+plt.xlabel(<span style="color: #98be65;">'livingSpace'</span>)
+plt.ylabel(<span style="color: #98be65;">'number'</span>)
+<span style="color: #dcaeea;">livingSpace_plot_fname</span> = <span style="color: #98be65;">'img/livingSpace_plot.png'</span>
+plt.savefig(livingSpace_plot_fname)
+livingSpace_plot_fname
+</pre>
+</div>
+
+<p>
+<a href=""></a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5a23ea5" class="outline-4">
+<h4 id="org5a23ea5"><span class="section-number-4">2.7.3.</span> baseRent</h4>
+<div class="outline-text-4" id="text-2-7-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.baseRent.value_counts()/<span style="color: #c678dd;">len</span>(data)*<span style="color: #da8548; font-weight: bold;">100</span>)
+
+</pre>
+</div>
+
+<pre class="example" id="org2696826">
+350.00     1.404200
+450.00     1.334670
+300.00     1.168807
+400.00     1.126079
+650.00     1.089566
+             ...   
+400.44     0.000388
+2749.00    0.000388
+857.85     0.000388
+412.40     0.000388
+1255.38    0.000388
+Name: baseRent, Length: 26256, dtype: float64
+</pre>
+</div>
+
+<ol class="org-ol">
+<li><a id="org78ff0c7"></a>yearConstructed<br />
+<div class="outline-text-5" id="text-2-7-3-1">
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.scatter(x = data.baseRent, y = data.yearConstructed)
+<span style="color: #dcaeea;">plt.xlabel</span> = <span style="color: #98be65;">'baseRent'</span>
+<span style="color: #dcaeea;">plt.ylabel</span> = <span style="color: #98be65;">'YearConstructed'</span>
+<span style="color: #dcaeea;">baseRent_and_yearConstructed_plot_fname</span> = <span style="color: #98be65;">'img/baseRent_and_yearConstructed_plot.png'</span>
+plt.savefig(baseRent_and_yearConstructed_plot_fname)
+baseRent_and_yearConstructed_plot_fname
+
+
+</pre>
+</div>
+
+
+<div id="org177a6be" class="figure">
+<p><img src="img/baseRent_and_yearConstructed_plot.png" alt="baseRent_and_yearConstructed_plot.png" />
+</p>
+</div>
+</div>
+</li>
+
+<li><a id="org139b2d3"></a>regio2<br />
+<div class="outline-text-5" id="text-2-7-3-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">lower_mask_baseR</span> = (data.baseRent &gt; <span style="color: #da8548; font-weight: bold;">10</span>)
+<span style="color: #dcaeea;">upper_mask_baseR</span> = (data.baseRent &lt; <span style="color: #da8548; font-weight: bold;">2000</span>)
+<span style="color: #dcaeea;">baseR_mask</span> = lower_mask_baseR &amp; upper_mask_baseR
+
+<span style="color: #dcaeea;">baseR_data</span> = data[baseR_mask]
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+plt.clf()
+plt.figure(figsize=(<span style="color: #da8548; font-weight: bold;">10</span>,<span style="color: #da8548; font-weight: bold;">10</span>))
+plt.scatter(x = baseR_data.baseRent, y = baseR_data.regio2)
+<span style="color: #dcaeea;">plt.xlabel</span> = <span style="color: #98be65;">'baseRent'</span>
+<span style="color: #dcaeea;">plt.ylabel</span> = <span style="color: #98be65;">'regio2'</span>
+<span style="color: #dcaeea;">baseRent_and_regio2_plot_fname</span> = <span style="color: #98be65;">'img/baseRent_and_regio2_plot.png'</span>
+plt.savefig(baseRent_and_regio2_plot_fname)
+baseRent_and_regio2_plot_fname
+
+</pre>
+</div>
+
+
+<div id="org22c886a" class="figure">
+<p><img src="img/baseRent_and_regio2_plot.png" alt="baseRent_and_regio2_plot.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+
+
+<div id="outline-container-org724b25f" class="outline-4">
+<h4 id="org724b25f"><span class="section-number-4">2.7.4.</span> houses</h4>
+<div class="outline-text-4" id="text-2-7-4">
+</div>
+<ol class="org-ol">
+<li><a id="org46d7aa2"></a>typeOfFlat &amp; yearConstructed<br />
+<div class="outline-text-5" id="text-2-7-4-1">
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+sns.catplot(x=<span style="color: #98be65;">"typeOfFlat"</span>, y=<span style="color: #98be65;">"yearConstructed"</span>, hue=<span style="color: #98be65;">"baseRentRange"</span>,kind=<span style="color: #98be65;">'swarm'</span>, data=data.sample(<span style="color: #da8548; font-weight: bold;">4000</span>),aspect=<span style="color: #da8548; font-weight: bold;">17.5</span>/<span style="color: #da8548; font-weight: bold;">17.5</span>,height=<span style="color: #da8548; font-weight: bold;">18</span>)
+<span style="color: #dcaeea;">houses_with_typeOfFlat_n_yearConstructed_baseRentRange_plot_fname</span> = <span style="color: #98be65;">'img/houses_with_typeOfFlat_n_yearConstructed_baseRentRange.png'</span>
+plt.savefig(houses_with_typeOfFlat_n_yearConstructed_baseRentRange_plot_fname)
+houses_with_typeOfFlat_n_yearConstructed_baseRentRange_plot_fname
+
+</pre>
+</div>
+
+
+<div id="orgaddcec7" class="figure">
+<p><img src="img/houses_with_typeOfFlat_n_yearConstructed_baseRentRange.png" alt="houses_with_typeOfFlat_n_yearConstructed_baseRentRange.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+sns.catplot(x=<span style="color: #98be65;">"color"</span>, y=<span style="color: #98be65;">"price"</span>, kind=<span style="color: #98be65;">"boxen"</span>,
+            data=data)
+
+</pre>
+</div>
+
+<p>
+<a href=""></a>
+</p>
+</div>
+</li>
+
+
+<li><a id="org8a4a5d4"></a>heatingType &amp;  livingSpace<br />
+<div class="outline-text-5" id="text-2-7-4-2">
+<div class="org-src-container">
+<pre class="src src-python">plt.clf()
+sns.catplot(x=<span style="color: #98be65;">"heatingType"</span>, y=<span style="color: #98be65;">"livingSpace"</span>, hue=<span style="color: #98be65;">"baseRentRange"</span>,kind=<span style="color: #98be65;">'swarm'</span>, data=data.sample(<span style="color: #da8548; font-weight: bold;">4000</span>),aspect=<span style="color: #da8548; font-weight: bold;">17.5</span>/<span style="color: #da8548; font-weight: bold;">17.5</span>,height=<span style="color: #da8548; font-weight: bold;">18</span>)
+<span style="color: #dcaeea;">houses_with_heatingType_n_livingSpace_baseRentRange_plot_fname</span> = <span style="color: #98be65;">'img/houses_with_heatingType_n_livingSpace_baseRentRange.png'</span>
+plt.savefig(houses_with_heatingType_n_livingSpace_baseRentRange_plot_fname)
+houses_with_heatingType_n_livingSpace_baseRentRange_plot_fname
+
+</pre>
+</div>
+
+
+<div id="orga53f8a2" class="figure">
+<p><img src="img/houses_with_heatingType_n_livingSpace_baseRentRange.png" alt="houses_with_heatingType_n_livingSpace_baseRentRange.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-org7b71ca5" class="outline-3">
+<h3 id="org7b71ca5"><span class="section-number-3">2.8.</span> Models</h3>
+<div class="outline-text-3" id="text-2-8">
+</div>
+<div id="outline-container-orgae5d152" class="outline-4">
+<h4 id="orgae5d152"><span class="section-number-4">2.8.1.</span> prepare data for model</h4>
+<div class="outline-text-4" id="text-2-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5f095a4"></a>select feature<br />
+<div class="outline-text-5" id="text-2-8-1-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">print</span>(data.columns)
+
+</pre>
+</div>
+
+<pre class="example">
+Index(['serviceCharge', 'heatingType', 'newlyConst', 'balcony', 'totalRent',
+       'yearConstructed', 'hasKitchen', 'cellar', 'baseRent', 'livingSpace',
+       'condition', 'interiorQual', 'petsAllowed', 'lift', 'baseRentRange',
+       'typeOfFlat', 'noRooms', 'thermalChar', 'floor', 'numberOfFloors',
+       'garden', 'regio2'],
+      dtype='object')
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">model_data_1</span> = data[[ <span style="color: #98be65;">'yearConstructed'</span> ,<span style="color: #98be65;">'serviceCharge'</span>,<span style="color: #98be65;">'heatingType'</span>, <span style="color: #98be65;">'balcony'</span>, <span style="color: #98be65;">'hasKitchen'</span>, <span style="color: #98be65;">'livingSpace'</span>, <span style="color: #98be65;">'baseRent'</span>]]
+<span style="color: #dcaeea;">model_data_2</span> = data[[ <span style="color: #98be65;">'yearConstructed'</span> ,<span style="color: #98be65;">'noRooms'</span>,<span style="color: #98be65;">'heatingType'</span>, <span style="color: #98be65;">'cellar'</span>, <span style="color: #98be65;">'hasKitchen'</span>, <span style="color: #98be65;">'numberOfFloors'</span>, <span style="color: #98be65;">'baseRent'</span>]]
+<span style="color: #dcaeea;">model_data_3</span> = data[[ <span style="color: #98be65;">'yearConstructed'</span> ,<span style="color: #98be65;">'noRooms'</span>,<span style="color: #98be65;">'interiorQual'</span>, <span style="color: #98be65;">'condition'</span>, <span style="color: #98be65;">'hasKitchen'</span>, <span style="color: #98be65;">'livingSpace'</span>, <span style="color: #98be65;">'baseRent'</span>]]
+<span style="color: #dcaeea;">model_data_4</span> = data[[ <span style="color: #98be65;">'garden'</span> ,<span style="color: #98be65;">'floor'</span>,<span style="color: #98be65;">'typeOfFlat'</span>, <span style="color: #98be65;">'cellar'</span>, <span style="color: #98be65;">'hasKitchen'</span>, <span style="color: #98be65;">'numberOfFloors'</span>, <span style="color: #98be65;">'baseRent'</span>]]
+
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org4d16d87"></a>encode data<br />
+<div class="outline-text-5" id="text-2-8-1-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">column_to_encode</span> = get_categorical_data(data)
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">encode</span>(data):
+    <span style="color: #51afef;">for</span> column <span style="color: #51afef;">in</span> data.columns[data.columns.isin(column_to_encode)]:
+        <span style="color: #dcaeea;">data</span>[column] = data[column].factorize()[<span style="color: #da8548; font-weight: bold;">0</span>]
+    <span style="color: #51afef;">return</span> data
+
+<span style="color: #dcaeea;">model_data_1_encoded</span> = encode(model_data_1.copy())
+<span style="color: #dcaeea;">model_data_2_encoded</span> = encode(model_data_2.copy())
+<span style="color: #dcaeea;">model_data_3_encoded</span> = encode(model_data_3.copy())
+<span style="color: #dcaeea;">model_data_4_encoded</span> = encode(model_data_4.copy())
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org9c13da1" class="outline-4">
+<h4 id="org9c13da1"><span class="section-number-4">2.8.2.</span> split data and model</h4>
+<div class="outline-text-4" id="text-2-8-2">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">model_trainer</span>(data):
+
+    <span style="color: #dcaeea;">x</span> = data.iloc[:,[<span style="color: #da8548; font-weight: bold;">0</span>,<span style="color: #da8548; font-weight: bold;">1</span>,<span style="color: #da8548; font-weight: bold;">2</span>,<span style="color: #da8548; font-weight: bold;">3</span>,<span style="color: #da8548; font-weight: bold;">4</span>,<span style="color: #da8548; font-weight: bold;">5</span>]]
+    <span style="color: #dcaeea;">y</span> = data.iloc[:,[<span style="color: #da8548; font-weight: bold;">6</span>]]
+    <span style="color: #dcaeea;">x_train</span>,<span style="color: #dcaeea;">x_test</span>,<span style="color: #dcaeea;">y_train</span>,<span style="color: #dcaeea;">y_test</span>=train_test_split(x,y,test_size=.<span style="color: #da8548; font-weight: bold;">2</span>,random_state=<span style="color: #da8548; font-weight: bold;">500</span> )
+    <span style="color: #dcaeea;">linear_model</span> = LinearRegression()
+    linear_model.fit(x_train,y_train)
+    <span style="color: #dcaeea;">y_pred</span> = linear_model.predict(x_test)
+    <span style="color: #51afef;">print</span>(r2_score(y_test,y_pred))
+    <span style="color: #51afef;">return</span> (y_test, y_pred)
+
+
+<span style="color: #dcaeea;">data1</span> = model_trainer(model_data_1_encoded)
+<span style="color: #dcaeea;">data2</span> = model_trainer(model_data_2_encoded)
+<span style="color: #dcaeea;">data3</span> = model_trainer(model_data_3_encoded)
+<span style="color: #dcaeea;">data4</span> = model_trainer(model_data_4_encoded)
+</pre>
+</div>
+
+<pre class="example">
+0.5404128121895404
+0.2856885743825939
+0.5387703899065475
+0.0787720846257648
+</pre>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="outline-container-org49c20f1" class="outline-3">
+<h3 id="org49c20f1"><span class="section-number-3">2.9.</span> ‫‪Multiprocessing‬‬</h3>
+<div class="outline-text-3" id="text-2-9">
+<ul class="org-ul">
+<li>use multiprocessing to get outliers indexes</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">detect_outlier_and_drop</span>(data):
+    <span style="color: #dcaeea;">indexs</span> = []
+    <span style="color: #51afef;">if</span> data.dtype == <span style="color: #98be65;">'int64'</span> <span style="color: #51afef;">or</span> data.dtype == <span style="color: #98be65;">'float64'</span>:
+        <span style="color: #dcaeea;">upper_range</span> = data.mean() + <span style="color: #da8548; font-weight: bold;">3</span> * data.std()
+        <span style="color: #dcaeea;">lower_range</span> = data.mean() - <span style="color: #da8548; font-weight: bold;">3</span> * data.std()
+
+        <span style="color: #dcaeea;">indexs</span> = data[(data &gt; upper_range) | (data &lt; lower_range)].index
+    <span style="color: #51afef;">return</span> indexs
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">s_time</span> = time.time()
+
+<span style="color: #dcaeea;">clean_list</span> = <span style="color: #c678dd;">list</span>(<span style="color: #c678dd;">map</span>(detect_outlier_and_drop, [(raw_data[col]) <span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> raw_data._get_numeric_data().columns]))
+<span style="color: #51afef;">print</span>(f<span style="color: #98be65;">'run time : {time.time() - s_time}'</span>)
+</pre>
+</div>
+
+<pre class="example">
+run time : 0.07304620742797852
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">s_time</span> = time.time()
+<span style="color: #51afef;">with</span> mp.Pool(mp.cpu_count()) <span style="color: #51afef;">as</span> p:
+    <span style="color: #dcaeea;">clean_data_from_p</span> = <span style="color: #c678dd;">list</span>(p.imap(detect_outlier_and_drop,[raw_data[col] <span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> raw_data._get_numeric_data().columns] ))
+<span style="color: #51afef;">print</span>(f<span style="color: #98be65;">'run time : {time.time() - s_time}'</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+run time : 0.47928476333618164
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org353748a" class="outline-3">
+<h3 id="org353748a"><span class="section-number-3">2.10.</span> <span class="todo TODO">TODO</span> dask &amp; pyspark</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mohammadb Ghorbani</p>
+<p class="date">Created: 2022-04-07 Thu 16:20</p>
+</div>
+</body>
+</html>
