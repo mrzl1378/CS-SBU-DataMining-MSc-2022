@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-19 Thu 20:10 -->
+<!-- 2022-05-19 Thu 20:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Project2</title>
@@ -201,53 +201,53 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org47a3c74">1. Mobile Data</a>
+<li><a href="#orgb57da79">1. Mobile Data</a>
 <ul>
-<li><a href="#org16d6e6a">1.1. imports</a></li>
-<li><a href="#org6c75e79">1.2. read data</a>
+<li><a href="#org3f914a9">1.1. imports</a></li>
+<li><a href="#org083bd80">1.2. read data</a>
 <ul>
-<li><a href="#orgfbca2cd">1.2.1. change price data format</a></li>
+<li><a href="#org52f19f1">1.2.1. change price data format</a></li>
 </ul>
 </li>
-<li><a href="#org5b4cf31">1.3. Forward Selection</a></li>
-<li><a href="#orgbf42e8b">1.4. PCA &amp; Train Logistic Model</a></li>
-<li><a href="#orgac633d6">1.5. SVM</a>
+<li><a href="#orgc8ea97a">1.3. Forward Selection</a></li>
+<li><a href="#orga735f4a">1.4. PCA &amp; Train Logistic Model</a></li>
+<li><a href="#orge4ae29c">1.5. SVM</a>
 <ul>
-<li><a href="#orgee791a2">1.5.1. Train Model</a></li>
-<li><a href="#orgf4db417">1.5.2. Results</a></li>
-<li><a href="#orgfd3a0a4">1.5.3. Tuning Hyperparameters</a></li>
+<li><a href="#org3b54762">1.5.1. Train Model</a></li>
+<li><a href="#orgb140de3">1.5.2. Results</a></li>
+<li><a href="#org4e0dc97">1.5.3. Tuning Hyperparameters</a></li>
 </ul>
 </li>
-<li><a href="#org084f1e4">1.6. Tree</a>
+<li><a href="#orgf719b57">1.6. Tree</a>
 <ul>
-<li><a href="#org4e62ea4">1.6.1. Tuning Hyperparameters</a></li>
+<li><a href="#org231a245">1.6.1. Tuning Hyperparameters</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org7909166">2. Heart</a>
+<li><a href="#orgd668e8e">2. Heart</a>
 <ul>
-<li><a href="#orgce08e64">2.1. imports</a></li>
-<li><a href="#orgf4e4821">2.2. read data</a></li>
-<li><a href="#org4326220">2.3. Gaussian Naive Bayes</a></li>
+<li><a href="#org51fc4c8">2.1. imports</a></li>
+<li><a href="#orgb6ce6f4">2.2. read data</a></li>
+<li><a href="#orge0bc92e">2.3. Gaussian Naive Bayes</a></li>
 </ul>
 </li>
-<li><a href="#org80b9bc6">3. Questions</a>
+<li><a href="#org0c50c56">3. Questions</a>
 <ul>
-<li><a href="#org754ab56">3.1. Task 1</a>
+<li><a href="#org42216a1">3.1. Task 1</a>
 <ul>
-<li><a href="#org54b5030">3.1.1. Q 5</a></li>
-<li><a href="#org1896981">3.1.2. Q 9 part B</a></li>
-<li><a href="#orgf425892">3.1.3. Q 9 , part C</a></li>
-<li><a href="#org8dce0ce">3.1.4. Q 11</a></li>
-<li><a href="#orgcdbc9cf">3.1.5. Q 14</a></li>
-<li><a href="#org43418f6">3.1.6. Q 15</a></li>
-<li><a href="#org46a1954">3.1.7. Q 16</a></li>
+<li><a href="#orga26e4a4">3.1.1. Q 5</a></li>
+<li><a href="#orgd6379b9">3.1.2. Q 9 part B</a></li>
+<li><a href="#orged8eb15">3.1.3. Q 9 , part C</a></li>
+<li><a href="#org48d49cb">3.1.4. Q 11</a></li>
+<li><a href="#org173ca26">3.1.5. Q 14</a></li>
+<li><a href="#orge80284d">3.1.6. Q 15</a></li>
+<li><a href="#org47fcaee">3.1.7. Q 16</a></li>
 </ul>
 </li>
-<li><a href="#org5b52686">3.2. Task 2</a>
+<li><a href="#org31dab9b">3.2. Task 2</a>
 <ul>
-<li><a href="#org41ae0db">3.2.1. Q 1</a></li>
+<li><a href="#orgd9a4797">3.2.1. Q 1</a></li>
 </ul>
 </li>
 </ul>
@@ -257,13 +257,13 @@
 </div>
 
 
-<div id="outline-container-org47a3c74" class="outline-2">
-<h2 id="org47a3c74"><span class="section-number-2">1.</span> Mobile Data</h2>
+<div id="outline-container-orgb57da79" class="outline-2">
+<h2 id="orgb57da79"><span class="section-number-2">1.</span> Mobile Data</h2>
 <div class="outline-text-2" id="text-1">
 </div>
 
-<div id="outline-container-org16d6e6a" class="outline-3">
-<h3 id="org16d6e6a"><span class="section-number-3">1.1.</span> imports</h3>
+<div id="outline-container-org3f914a9" class="outline-3">
+<h3 id="org3f914a9"><span class="section-number-3">1.1.</span> imports</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #51afef;">import</span> numpy <span style="color: #51afef;">as</span> np
@@ -286,8 +286,8 @@
 </div>
 </div>
 
-<div id="outline-container-org6c75e79" class="outline-3">
-<h3 id="org6c75e79"><span class="section-number-3">1.2.</span> read data</h3>
+<div id="outline-container-org083bd80" class="outline-3">
+<h3 id="org083bd80"><span class="section-number-3">1.2.</span> read data</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -304,7 +304,7 @@
 </pre>
 </div>
 
-<pre class="example" id="orgaf26bd3">
+<pre class="example" id="orgc1238a5">
    battery_power  blue  clock_speed  dual_sim  fc  four_g  int_memory  m_dep  mobile_wt  n_cores  pc  px_height  px_width   ram  sc_h  sc_w  talk_time  three_g  touch_screen  wifi  price_range
 0            842     0          2.2         0   1       0           7    0.6        188        2   2         20       756  2549     9     7         19        0             0     1            1
 1           1021     1          0.5         1   0       1          53    0.7        136        3   6        905      1988  2631    17     3          7        1             1     0            2
@@ -336,8 +336,8 @@ dtype: int64
 </pre>
 </div>
 
-<div id="outline-container-orgfbca2cd" class="outline-4">
-<h4 id="orgfbca2cd"><span class="section-number-4">1.2.1.</span> change price data format</h4>
+<div id="outline-container-org52f19f1" class="outline-4">
+<h4 id="org52f19f1"><span class="section-number-4">1.2.1.</span> change price data format</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -359,8 +359,8 @@ raw_train_data.price_range = raw_train_data.price_range.<span style="color: #c67
 </div>
 
 
-<div id="outline-container-org5b4cf31" class="outline-3">
-<h3 id="org5b4cf31"><span class="section-number-3">1.3.</span> Forward Selection</h3>
+<div id="outline-container-orgc8ea97a" class="outline-3">
+<h3 id="orgc8ea97a"><span class="section-number-3">1.3.</span> Forward Selection</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -426,7 +426,7 @@ raw_train_data.price_range = raw_train_data.price_range.<span style="color: #c67
 </div>
 
 <pre class="example">
-11
+10
 </pre>
 
 
@@ -448,25 +448,25 @@ model.fit(x_train, y_train)
 </pre>
 </div>
 
-<pre class="example" id="org3e52bf3">
-clean features are : ['battery_power', 'dual_sim', 'four_g', 'm_dep', 'mobile_wt', 'pc', 'px_width', 'ram', 'talk_time', 'three_g', 'touch_screen']
-junk_features are  :['blue', 'clock_speed', 'fc', 'int_memory', 'n_cores', 'px_height', 'sc_h', 'sc_w', 'touch_screen']
-0.9650000000000001
+<pre class="example" id="org0afe90a">
+clean features are : ['battery_power', 'dual_sim', 'four_g', 'm_dep', 'mobile_wt', 'px_height', 'ram', 'sc_w', 'three_g', 'touch_screen']
+junk_features are  :['blue', 'clock_speed', 'fc', 'int_memory', 'n_cores', 'pc', 'px_width', 'sc_h', 'talk_time', 'touch_screen']
+0.9698727122090833
               precision    recall  f1-score   support
 
-           0       0.94      0.97      0.95       205
-           1       0.96      0.93      0.95       195
+           0       0.97      0.96      0.96       209
+           1       0.96      0.96      0.96       191
 
-    accuracy                           0.95       400
-   macro avg       0.95      0.95      0.95       400
-weighted avg       0.95      0.95      0.95       400
+    accuracy                           0.96       400
+   macro avg       0.96      0.96      0.96       400
+weighted avg       0.96      0.96      0.96       400
 </pre>
 </div>
 </div>
 
 
-<div id="outline-container-orgbf42e8b" class="outline-3">
-<h3 id="orgbf42e8b"><span class="section-number-3">1.4.</span> PCA &amp; Train Logistic Model</h3>
+<div id="outline-container-orga735f4a" class="outline-3">
+<h3 id="orga735f4a"><span class="section-number-3">1.4.</span> PCA &amp; Train Logistic Model</h3>
 <div class="outline-text-3" id="text-1-4">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -490,12 +490,12 @@ model.fit(x_train, y_train)
 <pre class="example">
               precision    recall  f1-score   support
 
-           0       0.97      0.99      0.98       194
-           1       0.99      0.98      0.98       206
+           0       0.95      0.95      0.95       199
+           1       0.95      0.96      0.95       201
 
-    accuracy                           0.98       400
-   macro avg       0.98      0.98      0.98       400
-weighted avg       0.98      0.98      0.98       400
+    accuracy                           0.95       400
+   macro avg       0.95      0.95      0.95       400
+weighted avg       0.95      0.95      0.95       400
 </pre>
 </div>
 </div>
@@ -503,12 +503,12 @@ weighted avg       0.98      0.98      0.98       400
 
 
 
-<div id="outline-container-orgac633d6" class="outline-3">
-<h3 id="orgac633d6"><span class="section-number-3">1.5.</span> SVM</h3>
+<div id="outline-container-orge4ae29c" class="outline-3">
+<h3 id="orge4ae29c"><span class="section-number-3">1.5.</span> SVM</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-orgee791a2" class="outline-4">
-<h4 id="orgee791a2"><span class="section-number-4">1.5.1.</span> Train Model</h4>
+<div id="outline-container-org3b54762" class="outline-4">
+<h4 id="org3b54762"><span class="section-number-4">1.5.1.</span> Train Model</h4>
 <div class="outline-text-4" id="text-1-5-1">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -527,8 +527,8 @@ y_pred = clf.predict(x_test)
 </div>
 </div>
 
-<div id="outline-container-orgf4db417" class="outline-4">
-<h4 id="orgf4db417"><span class="section-number-4">1.5.2.</span> Results</h4>
+<div id="outline-container-orgb140de3" class="outline-4">
+<h4 id="orgb140de3"><span class="section-number-4">1.5.2.</span> Results</h4>
 <div class="outline-text-4" id="text-1-5-2">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -543,15 +543,15 @@ y_pred = clf.predict(x_test)
 </div>
 
 <pre class="example">
-Accuracy: 0.97
-Precision: 0.970873786407767
-Recall: 0.970873786407767
+Accuracy: 0.9575
+Precision: 0.9554455445544554
+Recall: 0.9601990049751243
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orgfd3a0a4" class="outline-4">
-<h4 id="orgfd3a0a4"><span class="section-number-4">1.5.3.</span> Tuning Hyperparameters</h4>
+<div id="outline-container-org4e0dc97" class="outline-4">
+<h4 id="org4e0dc97"><span class="section-number-4">1.5.3.</span> Tuning Hyperparameters</h4>
 <div class="outline-text-4" id="text-1-5-3">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -587,11 +587,11 @@ Recall: 0.970873786407767
 </div>
 
 <pre class="example">
-linear : 0.1 : scale : accuracy + precision + recall : (0.9725, 0.975609756097561, 0.970873786407767)
-poly : 1.0 : scale : accuracy + precision + recall : (0.96, 0.9481132075471698, 0.9757281553398058)
-rbf : 10.0 : scale : accuracy + precision + recall : (0.975, 0.9757281553398058, 0.9757281553398058)
-sigmoid : 100.0 : scale : accuracy + precision + recall : (0.9025, 0.9282051282051282, 0.8786407766990292)
-linear : 0.001 : scale : accuracy + precision + recall : (0.98, 0.9852941176470589, 0.9757281553398058)
+linear : 0.1 : scale : accuracy + precision + recall : (0.9575, 0.9554455445544554, 0.9601990049751243)
+poly : 1.0 : scale : accuracy + precision + recall : (0.955, 0.9597989949748744, 0.9502487562189055)
+rbf : 10.0 : scale : accuracy + precision + recall : (0.9525, 0.9504950495049505, 0.9552238805970149)
+sigmoid : 100.0 : scale : accuracy + precision + recall : (0.895, 0.9119170984455959, 0.8756218905472637)
+linear : 0.001 : scale : accuracy + precision + recall : (0.955, 0.9552238805970149, 0.9552238805970149)
 </pre>
 
 
@@ -636,9 +636,9 @@ y_pred = clf.predict(x_test)
 </div>
 
 <pre class="example">
-Accuracy: 0.97
-Precision: 0.9689119170984456
-Recall: 0.9689119170984456
+Accuracy: 0.98
+Precision: 0.981042654028436
+Recall: 0.981042654028436
 </pre>
 
 
@@ -668,9 +668,9 @@ y_pred = clf.predict(x_test)
 </div>
 
 <pre class="example">
-Accuracy: 0.98
-Precision: 0.9770491803278688
-Recall: 0.9834983498349835
+Accuracy: 0.975
+Precision: 0.9705882352941176
+Recall: 0.9801980198019802
 </pre>
 
 
@@ -691,8 +691,8 @@ None
 </div>
 </div>
 
-<div id="outline-container-org084f1e4" class="outline-3">
-<h3 id="org084f1e4"><span class="section-number-3">1.6.</span> Tree</h3>
+<div id="outline-container-orgf719b57" class="outline-3">
+<h3 id="orgf719b57"><span class="section-number-3">1.6.</span> Tree</h3>
 <div class="outline-text-3" id="text-1-6">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #dcaeea;">x</span> = test_data
@@ -708,12 +708,12 @@ y_pred = clf.predict(x_test)
 </div>
 
 <pre class="example">
-Accuracy: 0.9533333333333334
+Accuracy: 0.9283333333333333
 </pre>
 </div>
 
-<div id="outline-container-org4e62ea4" class="outline-4">
-<h4 id="org4e62ea4"><span class="section-number-4">1.6.1.</span> Tuning Hyperparameters</h4>
+<div id="outline-container-org231a245" class="outline-4">
+<h4 id="org231a245"><span class="section-number-4">1.6.1.</span> Tuning Hyperparameters</h4>
 <div class="outline-text-4" id="text-1-6-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #dcaeea;">c</span> = [<span style="color: #98be65;">"entropy"</span>, <span style="color: #98be65;">"gini"</span>, <span style="color: #98be65;">"gini"</span>]
@@ -736,11 +736,11 @@ Accuracy: 0.9533333333333334
 
 <pre class="example">
 criterion : entropy depth : 10 splitter : random min_samples_leaf : 2
-Accuracy: 0.9383333333333334
+Accuracy: 0.9466666666666667
 criterion : gini depth : 40 splitter : best min_samples_leaf : 3
-Accuracy: 0.945
+Accuracy: 0.9333333333333333
 criterion : gini depth : 90 splitter : random min_samples_leaf : 4
-Accuracy: 0.9433333333333334
+Accuracy: 0.96
 </pre>
 </div>
 </div>
@@ -749,14 +749,14 @@ Accuracy: 0.9433333333333334
 
 
 
-<div id="outline-container-org7909166" class="outline-2">
-<h2 id="org7909166"><span class="section-number-2">2.</span> Heart</h2>
+<div id="outline-container-orgd668e8e" class="outline-2">
+<h2 id="orgd668e8e"><span class="section-number-2">2.</span> Heart</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 
 
-<div id="outline-container-orgce08e64" class="outline-3">
-<h3 id="orgce08e64"><span class="section-number-3">2.1.</span> imports</h3>
+<div id="outline-container-org51fc4c8" class="outline-3">
+<h3 id="org51fc4c8"><span class="section-number-3">2.1.</span> imports</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -774,8 +774,8 @@ Accuracy: 0.9433333333333334
 </div>
 </div>
 
-<div id="outline-container-orgf4e4821" class="outline-3">
-<h3 id="orgf4e4821"><span class="section-number-3">2.2.</span> read data</h3>
+<div id="outline-container-orgb6ce6f4" class="outline-3">
+<h3 id="orgb6ce6f4"><span class="section-number-3">2.2.</span> read data</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-python">
@@ -787,15 +787,15 @@ Accuracy: 0.9433333333333334
 </div>
 
 
-<div id="outline-container-org4326220" class="outline-3">
-<h3 id="org4326220"><span class="section-number-3">2.3.</span> Gaussian Naive Bayes</h3>
+<div id="outline-container-orge0bc92e" class="outline-3">
+<h3 id="orge0bc92e"><span class="section-number-3">2.3.</span> Gaussian Naive Bayes</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="org-src-container">
 <pre class="src src-python">
 <span style="color: #dcaeea;">means</span> = train_data.groupby([<span style="color: #98be65;">"target"</span>]).mean()
 <span style="color: #dcaeea;">var</span> = train_data.groupby([<span style="color: #98be65;">"target"</span>]).var()
 <span style="color: #dcaeea;">prior</span> = (train_data.groupby(<span style="color: #98be65;">"target"</span>).count() / <span style="color: #c678dd;">len</span>(train_data)).iloc[:,<span style="color: #da8548; font-weight: bold;">1</span>]
-
+<span style="color: #dcaeea;">classes</span> = [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">1</span>]
 
 
 </pre>
@@ -912,6 +912,22 @@ Accuracy: 0.9433333333333334
 </pre>
 </div>
 
+<pre class="example" id="org4be33fa">
+0.6859504132231405
+0.6721311475409836
+              precision    recall  f1-score   support
+
+           0       0.68      0.48      0.57        27
+           1       0.67      0.82      0.74        34
+
+    accuracy                           0.67        61
+   macro avg       0.68      0.65      0.65        61
+weighted avg       0.67      0.67      0.66        61
+</pre>
+
+
+
+
 <div class="org-src-container">
 <pre class="src src-python">
 <span style="color: #dcaeea;">x</span> = raw_data[[<span style="color: #98be65;">'chol'</span>, <span style="color: #98be65;">'trestbps'</span>, <span style="color: #98be65;">'thalach'</span>]]
@@ -939,16 +955,16 @@ weighted avg       0.70      0.70      0.70        61
 
 
 
-<div id="outline-container-org80b9bc6" class="outline-2">
-<h2 id="org80b9bc6"><span class="section-number-2">3.</span> Questions</h2>
+<div id="outline-container-org0c50c56" class="outline-2">
+<h2 id="org0c50c56"><span class="section-number-2">3.</span> Questions</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org754ab56" class="outline-3">
-<h3 id="org754ab56"><span class="section-number-3">3.1.</span> Task 1</h3>
+<div id="outline-container-org42216a1" class="outline-3">
+<h3 id="org42216a1"><span class="section-number-3">3.1.</span> Task 1</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org54b5030" class="outline-4">
-<h4 id="org54b5030"><span class="section-number-4">3.1.1.</span> Q 5</h4>
+<div id="outline-container-orga26e4a4" class="outline-4">
+<h4 id="orga26e4a4"><span class="section-number-4">3.1.1.</span> Q 5</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li>A kernel is a function used in SVM for helping to solve problems. They provide shortcuts to avoid complex calculations. The amazing thing about kernel is that we can go to higher dimensions and perform smooth calculations with the help of it.</li>
@@ -967,8 +983,8 @@ weighted avg       0.70      0.70      0.70        61
 
 
 
-<div id="outline-container-org1896981" class="outline-4">
-<h4 id="org1896981"><span class="section-number-4">3.1.2.</span> Q 9 part B</h4>
+<div id="outline-container-orgd6379b9" class="outline-4">
+<h4 id="orgd6379b9"><span class="section-number-4">3.1.2.</span> Q 9 part B</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li>One hot encoding is useful for data that has no relationship to each other. Machine learning algorithms treat the order of numbers as an attribute of significance. In other words, they will read a higher number as better or more important than a lower number.</li>
@@ -980,8 +996,8 @@ weighted avg       0.70      0.70      0.70        61
 </div>
 </div>
 
-<div id="outline-container-orgf425892" class="outline-4">
-<h4 id="orgf425892"><span class="section-number-4">3.1.3.</span> Q 9 , part C</h4>
+<div id="outline-container-orged8eb15" class="outline-4">
+<h4 id="orged8eb15"><span class="section-number-4">3.1.3.</span> Q 9 , part C</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li>When our original continuous data do not follow the bell curve, we can transform this data to make it as “normal” as possible so that the statistical analysis results from this data become more valid. In other words, the transformation reduces or removes the skewness of our original data. The important caveat here is that the original data has to follow or approximately follow a log-normal distribution. Otherwise, the log transformation won’t work.</li>
@@ -993,8 +1009,8 @@ weighted avg       0.70      0.70      0.70        61
 
 
 
-<div id="outline-container-org8dce0ce" class="outline-4">
-<h4 id="org8dce0ce"><span class="section-number-4">3.1.4.</span> Q 11</h4>
+<div id="outline-container-org48d49cb" class="outline-4">
+<h4 id="org48d49cb"><span class="section-number-4">3.1.4.</span> Q 11</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <ul class="org-ul">
 <li>The CART algorithm produces only binary Trees: non-leaf nodes always have two children (i.e., questions only have yes/no answers).</li>
@@ -1013,8 +1029,8 @@ weighted avg       0.70      0.70      0.70        61
 
 
 
-<div id="outline-container-orgcdbc9cf" class="outline-4">
-<h4 id="orgcdbc9cf"><span class="section-number-4">3.1.5.</span> Q 14</h4>
+<div id="outline-container-org173ca26" class="outline-4">
+<h4 id="org173ca26"><span class="section-number-4">3.1.5.</span> Q 14</h4>
 <div class="outline-text-4" id="text-3-1-5">
 <ul class="org-ul">
 <li>Pruning a decision tree helps to prevent overfitting the training data by reducing complexity so that our model generalizes well to unseen data. Pruning a decision tree means to remove a subtree that is redundant and not a useful split and replace it with a leaf node. Explainability — Pruned trees are shorter, simpler, and easier to explain.</li>
@@ -1026,8 +1042,8 @@ weighted avg       0.70      0.70      0.70        61
 
 
 
-<div id="outline-container-org43418f6" class="outline-4">
-<h4 id="org43418f6"><span class="section-number-4">3.1.6.</span> Q 15</h4>
+<div id="outline-container-orge80284d" class="outline-4">
+<h4 id="orge80284d"><span class="section-number-4">3.1.6.</span> Q 15</h4>
 <div class="outline-text-4" id="text-3-1-6">
 <ul class="org-ul">
 <li>bootstrapping is a resampling technique that involves repeatedly drawing samples from our source data with replacement, often to estimate a population parameter. By “with replacement”, we mean that the same data point may be included in our resampled dataset multiple times.</li>
@@ -1040,8 +1056,8 @@ weighted avg       0.70      0.70      0.70        61
 </div>
 </div>
 
-<div id="outline-container-org46a1954" class="outline-4">
-<h4 id="org46a1954"><span class="section-number-4">3.1.7.</span> Q 16</h4>
+<div id="outline-container-org47fcaee" class="outline-4">
+<h4 id="org47fcaee"><span class="section-number-4">3.1.7.</span> Q 16</h4>
 <div class="outline-text-4" id="text-3-1-7">
 <ul class="org-ul">
 <li>2-fold cross-validation Split the data set into two halves train on one and test on the other. This gives you two results. This approach has been shown to work well if you do it five times. it&rsquo;s used when we do not have lot&rsquo;s of data for traning parameters .</li>
@@ -1051,12 +1067,12 @@ weighted avg       0.70      0.70      0.70        61
 </div>
 
 
-<div id="outline-container-org5b52686" class="outline-3">
-<h3 id="org5b52686"><span class="section-number-3">3.2.</span> Task 2</h3>
+<div id="outline-container-org31dab9b" class="outline-3">
+<h3 id="org31dab9b"><span class="section-number-3">3.2.</span> Task 2</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-org41ae0db" class="outline-4">
-<h4 id="org41ae0db"><span class="section-number-4">3.2.1.</span> Q 1</h4>
+<div id="outline-container-orgd9a4797" class="outline-4">
+<h4 id="orgd9a4797"><span class="section-number-4">3.2.1.</span> Q 1</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <ul class="org-ul">
 <li>Bayes&rsquo; Theorem states that the conditional probability of an event, based on the occurrence of another event, is equal to the likelihood of the second event given the first event multiplied by the probability of the first event.</li>
@@ -1081,7 +1097,7 @@ weighted avg       0.70      0.70      0.70        61
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mohammadb Ghorbani</p>
-<p class="date">Created: 2022-05-19 Thu 20:10</p>
+<p class="date">Created: 2022-05-19 Thu 20:36</p>
 </div>
 </body>
 </html>
