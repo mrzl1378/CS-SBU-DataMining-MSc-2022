@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-05-19 Thu 20:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project2</title>
+<meta name="author" content="Mohammadb Ghorbani" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Project2</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org47a3c74">1. Mobile Data</a>
+<ul>
+<li><a href="#org16d6e6a">1.1. imports</a></li>
+<li><a href="#org6c75e79">1.2. read data</a>
+<ul>
+<li><a href="#orgfbca2cd">1.2.1. change price data format</a></li>
+</ul>
+</li>
+<li><a href="#org5b4cf31">1.3. Forward Selection</a></li>
+<li><a href="#orgbf42e8b">1.4. PCA &amp; Train Logistic Model</a></li>
+<li><a href="#orgac633d6">1.5. SVM</a>
+<ul>
+<li><a href="#orgee791a2">1.5.1. Train Model</a></li>
+<li><a href="#orgf4db417">1.5.2. Results</a></li>
+<li><a href="#orgfd3a0a4">1.5.3. Tuning Hyperparameters</a></li>
+</ul>
+</li>
+<li><a href="#org084f1e4">1.6. Tree</a>
+<ul>
+<li><a href="#org4e62ea4">1.6.1. Tuning Hyperparameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7909166">2. Heart</a>
+<ul>
+<li><a href="#orgce08e64">2.1. imports</a></li>
+<li><a href="#orgf4e4821">2.2. read data</a></li>
+<li><a href="#org4326220">2.3. Gaussian Naive Bayes</a></li>
+</ul>
+</li>
+<li><a href="#org80b9bc6">3. Questions</a>
+<ul>
+<li><a href="#org754ab56">3.1. Task 1</a>
+<ul>
+<li><a href="#org54b5030">3.1.1. Q 5</a></li>
+<li><a href="#org1896981">3.1.2. Q 9 part B</a></li>
+<li><a href="#orgf425892">3.1.3. Q 9 , part C</a></li>
+<li><a href="#org8dce0ce">3.1.4. Q 11</a></li>
+<li><a href="#orgcdbc9cf">3.1.5. Q 14</a></li>
+<li><a href="#org43418f6">3.1.6. Q 15</a></li>
+<li><a href="#org46a1954">3.1.7. Q 16</a></li>
+</ul>
+</li>
+<li><a href="#org5b52686">3.2. Task 2</a>
+<ul>
+<li><a href="#org41ae0db">3.2.1. Q 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org47a3c74" class="outline-2">
+<h2 id="org47a3c74"><span class="section-number-2">1.</span> Mobile Data</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+
+<div id="outline-container-org16d6e6a" class="outline-3">
+<h3 id="org16d6e6a"><span class="section-number-3">1.1.</span> imports</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">import</span> numpy <span style="color: #51afef;">as</span> np
+<span style="color: #51afef;">import</span> seaborn <span style="color: #51afef;">as</span> sns
+<span style="color: #51afef;">from</span> matplotlib.colors <span style="color: #51afef;">import</span> ListedColormap
+<span style="color: #51afef;">import</span> pandas <span style="color: #51afef;">as</span> pd
+<span style="color: #51afef;">from</span> sklearn.model_selection <span style="color: #51afef;">import</span> train_test_split
+<span style="color: #51afef;">from</span> sklearn.linear_model <span style="color: #51afef;">import</span> LogisticRegression
+<span style="color: #51afef;">from</span> sklearn.metrics <span style="color: #51afef;">import</span> roc_auc_score
+<span style="color: #51afef;">from</span> sklearn.metrics <span style="color: #51afef;">import</span> classification_report
+<span style="color: #51afef;">from</span> sklearn.decomposition <span style="color: #51afef;">import</span> PCA
+<span style="color: #51afef;">from</span> sklearn <span style="color: #51afef;">import</span> svm
+<span style="color: #51afef;">from</span> sklearn.tree <span style="color: #51afef;">import</span> DecisionTreeClassifier
+<span style="color: #51afef;">from</span> sklearn <span style="color: #51afef;">import</span> metrics
+<span style="color: #51afef;">import</span> matplotlib.pyplot <span style="color: #51afef;">as</span> plt
+<span style="color: #51afef;">from</span> mpl_toolkits.mplot3d <span style="color: #51afef;">import</span> Axes3D
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6c75e79" class="outline-3">
+<h3 id="org6c75e79"><span class="section-number-3">1.2.</span> read data</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">raw_train_data</span> = pd.read_csv(<span style="color: #98be65;">'train.csv'</span>)
+<span style="color: #dcaeea;">raw_test_data</span> = pd.read_csv(<span style="color: #98be65;">'test.csv'</span>)
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #c678dd;">print</span>(raw_train_data.head())
+<span style="color: #c678dd;">print</span>(raw_train_data.isnull().<span style="color: #c678dd;">sum</span>())
+</pre>
+</div>
+
+<pre class="example" id="orgaf26bd3">
+   battery_power  blue  clock_speed  dual_sim  fc  four_g  int_memory  m_dep  mobile_wt  n_cores  pc  px_height  px_width   ram  sc_h  sc_w  talk_time  three_g  touch_screen  wifi  price_range
+0            842     0          2.2         0   1       0           7    0.6        188        2   2         20       756  2549     9     7         19        0             0     1            1
+1           1021     1          0.5         1   0       1          53    0.7        136        3   6        905      1988  2631    17     3          7        1             1     0            2
+2            563     1          0.5         1   2       1          41    0.9        145        5   6       1263      1716  2603    11     2          9        1             1     0            2
+3            615     1          2.5         0   0       0          10    0.8        131        6   9       1216      1786  2769    16     8         11        1             0     0            2
+4           1821     1          1.2         0  13       1          44    0.6        141        2  14       1208      1212  1411     8     2         15        1             1     0            1
+battery_power    0
+blue             0
+clock_speed      0
+dual_sim         0
+fc               0
+four_g           0
+int_memory       0
+m_dep            0
+mobile_wt        0
+n_cores          0
+pc               0
+px_height        0
+px_width         0
+ram              0
+sc_h             0
+sc_w             0
+talk_time        0
+three_g          0
+touch_screen     0
+wifi             0
+price_range      0
+dtype: int64
+</pre>
+</div>
+
+<div id="outline-container-orgfbca2cd" class="outline-4">
+<h4 id="orgfbca2cd"><span class="section-number-4">1.2.1.</span> change price data format</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">concat_price_to_two_classes</span>(price_range):
+
+   <span style="color: #51afef;">if</span> price_range == <span style="color: #da8548; font-weight: bold;">3</span> <span style="color: #51afef;">or</span> price_range == <span style="color: #da8548; font-weight: bold;">2</span>:
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">1</span>
+   <span style="color: #51afef;">else</span>:
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>
+
+
+raw_train_data.price_range = raw_train_data.price_range.<span style="color: #c678dd;">apply</span>(concat_price_to_two_classes)
+
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5b4cf31" class="outline-3">
+<h3 id="org5b4cf31"><span class="section-number-3">1.3.</span> Forward Selection</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">y</span> = raw_train_data.price_range
+<span style="color: #dcaeea;">train_data</span> = raw_train_data.drop([<span style="color: #98be65;">'price_range'</span>],axis=<span style="color: #da8548; font-weight: bold;">1</span>)
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">feature_ind</span> = []
+<span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(train_data.columns)) :
+    <span style="color: #dcaeea;">selected_features</span> = []
+    <span style="color: #51afef;">for</span> j, feature <span style="color: #51afef;">in</span> <span style="color: #c678dd;">enumerate</span>(train_data.columns):
+        <span style="color: #51afef;">if</span> j == i:
+            <span style="color: #51afef;">break</span>
+        selected_features.append(feature)
+
+    <span style="color: #51afef;">if</span> <span style="color: #c678dd;">len</span>(selected_features) &gt; <span style="color: #da8548; font-weight: bold;">0</span>:
+        feature_ind.append(selected_features)
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">perv_res</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+<span style="color: #dcaeea;">res</span> = {}
+<span style="color: #dcaeea;">junk_features</span> = []
+<span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(feature_ind)):
+
+    <span style="color: #51afef;">if</span> i == <span style="color: #da8548; font-weight: bold;">0</span>:
+        x = train_data[feature_ind[i]]
+        <span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+        model = LogisticRegression(solver=<span style="color: #98be65;">'liblinear'</span>, C=<span style="color: #da8548; font-weight: bold;">10.0</span>)
+        model.fit(x_train, y_train)
+        result = roc_auc_score(y_test, model.predict(x_test))
+        res[<span style="color: #c678dd;">str</span>(feature_ind[i])] = result
+    <span style="color: #51afef;">else</span>:
+        clean = [z <span style="color: #51afef;">for</span> z <span style="color: #51afef;">in</span> feature_ind[i] <span style="color: #51afef;">if</span> z <span style="color: #51afef;">not</span> <span style="color: #51afef;">in</span> junk_features]
+        x = train_data[clean]
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+
+        model = LogisticRegression(solver=<span style="color: #98be65;">'liblinear'</span>, C=<span style="color: #da8548; font-weight: bold;">10.0</span>)
+        model.fit(x_train, y_train)
+        result = roc_auc_score(y_test, model.predict(x_test))
+        res[<span style="color: #c678dd;">str</span>(clean)] = result
+    <span style="color: #51afef;">if</span> (perv_res &gt; result):
+
+        selected_features = feature_ind[i]
+        junk = selected_features[-<span style="color: #da8548; font-weight: bold;">1</span>]
+
+        junk_features.append(junk)
+
+    perv_res = result
+
+
+<span style="color: #c678dd;">print</span>(<span style="color: #c678dd;">len</span>(clean))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+11
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">x</span> = train_data[clean]
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+model = LogisticRegression(solver=<span style="color: #98be65;">'liblinear'</span>, C=<span style="color: #da8548; font-weight: bold;">10.0</span>)
+model.fit(x_train, y_train)
+
+
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"clean features are : "</span> + <span style="color: #c678dd;">str</span>(clean))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"junk_features are  :"</span> + <span style="color: #c678dd;">str</span>(junk_features))
+<span style="color: #c678dd;">print</span>(<span style="color: #c678dd;">max</span>(res.values()))
+
+
+<span style="color: #c678dd;">print</span>(classification_report(y_test, model.predict(x_test)))
+
+</pre>
+</div>
+
+<pre class="example" id="org3e52bf3">
+clean features are : ['battery_power', 'dual_sim', 'four_g', 'm_dep', 'mobile_wt', 'pc', 'px_width', 'ram', 'talk_time', 'three_g', 'touch_screen']
+junk_features are  :['blue', 'clock_speed', 'fc', 'int_memory', 'n_cores', 'px_height', 'sc_h', 'sc_w', 'touch_screen']
+0.9650000000000001
+              precision    recall  f1-score   support
+
+           0       0.94      0.97      0.95       205
+           1       0.96      0.93      0.95       195
+
+    accuracy                           0.95       400
+   macro avg       0.95      0.95      0.95       400
+weighted avg       0.95      0.95      0.95       400
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgbf42e8b" class="outline-3">
+<h3 id="orgbf42e8b"><span class="section-number-3">1.4.</span> PCA &amp; Train Logistic Model</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">pca</span> = PCA(n_components=<span style="color: #c678dd;">len</span>(clean), )
+
+x_train_pca = pca.fit_transform(train_data[clean])
+
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x_train_pca, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+model = LogisticRegression(solver=<span style="color: #98be65;">'liblinear'</span>, C=<span style="color: #da8548; font-weight: bold;">10.0</span>)
+model.fit(x_train, y_train)
+
+
+<span style="color: #c678dd;">print</span>(classification_report(y_test, model.predict(x_test)))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+              precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98       194
+           1       0.99      0.98      0.98       206
+
+    accuracy                           0.98       400
+   macro avg       0.98      0.98      0.98       400
+weighted avg       0.98      0.98      0.98       400
+</pre>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgac633d6" class="outline-3">
+<h3 id="orgac633d6"><span class="section-number-3">1.5.</span> SVM</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgee791a2" class="outline-4">
+<h4 id="orgee791a2"><span class="section-number-4">1.5.1.</span> Train Model</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">clf</span> = svm.SVC(kernel=<span style="color: #98be65;">'linear'</span>)
+
+clf.fit(x_train, y_train)
+
+y_pred = clf.predict(x_test)
+
+
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4db417" class="outline-4">
+<h4 id="orgf4db417"><span class="section-number-4">1.5.2.</span> Results</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Precision:"</span>,metrics.precision_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Recall:"</span>,metrics.recall_score(y_test, y_pred))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+Accuracy: 0.97
+Precision: 0.970873786407767
+Recall: 0.970873786407767
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgfd3a0a4" class="outline-4">
+<h4 id="orgfd3a0a4"><span class="section-number-4">1.5.3.</span> Tuning Hyperparameters</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">svm_res</span> = {}
+
+<span style="color: #dcaeea;">kernels</span> = [<span style="color: #98be65;">"linear"</span>, <span style="color: #98be65;">"poly"</span>, <span style="color: #98be65;">"rbf"</span>, <span style="color: #98be65;">"sigmoid"</span>, <span style="color: #98be65;">"linear"</span>]
+<span style="color: #dcaeea;">c</span> = [<span style="color: #da8548; font-weight: bold;">0.1</span>, <span style="color: #da8548; font-weight: bold;">1.0</span>, <span style="color: #da8548; font-weight: bold;">10.0</span>, <span style="color: #da8548; font-weight: bold;">100.0</span>, <span style="color: #da8548; font-weight: bold;">0.001</span>]
+
+
+<span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #da8548; font-weight: bold;">5</span>):
+
+    <span style="color: #dcaeea;">k</span> = <span style="color: #c678dd;">str</span>(kernels[i])
+    <span style="color: #dcaeea;">f</span> = <span style="color: #c678dd;">float</span>(c[i])
+
+    <span style="color: #dcaeea;">config</span> = <span style="color: #c678dd;">str</span>(kernels[i]) + <span style="color: #98be65;">" : "</span> +<span style="color: #c678dd;">str</span>(f) + <span style="color: #98be65;">" : "</span> + <span style="color: #98be65;">"scale"</span>
+    <span style="color: #dcaeea;">clf</span> = svm.SVC(kernel=k,C=f , gamma=<span style="color: #98be65;">'scale'</span>)
+    clf.fit(x_train, y_train)
+    y_pred = clf.predict(x_test)
+    acc = metrics.accuracy_score(y_test, y_pred)
+    pre = metrics.precision_score(y_test, y_pred)
+    recall = metrics.recall_score(y_test, y_pred)
+    <span style="color: #c678dd;">print</span>(<span style="color: #c678dd;">str</span>(config) + <span style="color: #98be65;">" : "</span> + <span style="color: #98be65;">"accuracy + precision + recall : "</span> + <span style="color: #c678dd;">str</span>((acc, pre, recall)))
+    svm_res[<span style="color: #c678dd;">str</span>(config)] = (acc, pre, recall)
+
+
+
+
+
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+linear : 0.1 : scale : accuracy + precision + recall : (0.9725, 0.975609756097561, 0.970873786407767)
+poly : 1.0 : scale : accuracy + precision + recall : (0.96, 0.9481132075471698, 0.9757281553398058)
+rbf : 10.0 : scale : accuracy + precision + recall : (0.975, 0.9757281553398058, 0.9757281553398058)
+sigmoid : 100.0 : scale : accuracy + precision + recall : (0.9025, 0.9282051282051282, 0.8786407766990292)
+linear : 0.001 : scale : accuracy + precision + recall : (0.98, 0.9852941176470589, 0.9757281553398058)
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">power_bins</span> = [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">800</span>, <span style="color: #da8548; font-weight: bold;">1000</span> , <span style="color: #da8548; font-weight: bold;">1200</span> , <span style="color: #da8548; font-weight: bold;">1998</span>]
+<span style="color: #dcaeea;">test_data</span> = train_data
+<span style="color: #dcaeea;">test_data</span>[<span style="color: #98be65;">"battery_power_b"</span>] = pd.cut(train_data[<span style="color: #98be65;">'battery_power'</span>], bins=power_bins, labels=[<span style="color: #da8548; font-weight: bold;">1</span>,<span style="color: #da8548; font-weight: bold;">2</span>,<span style="color: #da8548; font-weight: bold;">3</span>,<span style="color: #da8548; font-weight: bold;">4</span>])
+test_data.drop([<span style="color: #98be65;">'battery_power'</span>], axis=<span style="color: #da8548; font-weight: bold;">1</span>, inplace=<span style="color: #a9a1e1;">True</span>)
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+None
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">x</span> = test_data
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+clf = svm.SVC(kernel=<span style="color: #98be65;">'linear'</span>)
+
+clf.fit(x_train, y_train)
+
+y_pred = clf.predict(x_test)
+
+
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Precision:"</span>,metrics.precision_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Recall:"</span>,metrics.recall_score(y_test, y_pred))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+Accuracy: 0.97
+Precision: 0.9689119170984456
+Recall: 0.9689119170984456
+</pre>
+
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">test_data</span> = pd.get_dummies(test_data, prefix=[<span style="color: #98be65;">'dual_sim'</span>,<span style="color: #98be65;">'four_g'</span>,<span style="color: #98be65;">'three_g'</span>,<span style="color: #98be65;">'touch_screen'</span>,<span style="color: #98be65;">'wifi'</span>,<span style="color: #98be65;">'battery_power_b'</span>],
+               columns=[<span style="color: #98be65;">'dual_sim'</span>,<span style="color: #98be65;">'four_g'</span>,<span style="color: #98be65;">'three_g'</span>,<span style="color: #98be65;">'touch_screen'</span>,<span style="color: #98be65;">'wifi'</span>,<span style="color: #98be65;">'battery_power_b'</span>])
+
+
+x = test_data
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.3</span>)
+clf = svm.SVC(kernel=<span style="color: #98be65;">'linear'</span>)
+
+clf.fit(x_train, y_train)
+
+y_pred = clf.predict(x_test)
+
+
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Precision:"</span>,metrics.precision_score(y_test, y_pred))
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Recall:"</span>,metrics.recall_score(y_test, y_pred))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+Accuracy: 0.98
+Precision: 0.9770491803278688
+Recall: 0.9834983498349835
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">test_data</span>[<span style="color: #98be65;">'surface'</span>] = test_data[<span style="color: #98be65;">'px_height'</span>] * test_data[<span style="color: #98be65;">'px_width'</span>]
+<span style="color: #dcaeea;">test_data</span>[<span style="color: #98be65;">'surface_log'</span>] = np.log(test_data[<span style="color: #98be65;">'surface'</span>])
+test_data.drop([<span style="color: #98be65;">'surface_log'</span>],axis=<span style="color: #da8548; font-weight: bold;">1</span>,inplace=<span style="color: #a9a1e1;">True</span>)
+
+</pre>
+</div>
+
+<pre class="example">
+None
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org084f1e4" class="outline-3">
+<h3 id="org084f1e4"><span class="section-number-3">1.6.</span> Tree</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">x</span> = test_data
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.3</span>)
+
+clf = DecisionTreeClassifier()
+clf = clf.fit(x_train,y_train)
+y_pred = clf.predict(x_test)
+
+<span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))
+
+</pre>
+</div>
+
+<pre class="example">
+Accuracy: 0.9533333333333334
+</pre>
+</div>
+
+<div id="outline-container-org4e62ea4" class="outline-4">
+<h4 id="org4e62ea4"><span class="section-number-4">1.6.1.</span> Tuning Hyperparameters</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">c</span> = [<span style="color: #98be65;">"entropy"</span>, <span style="color: #98be65;">"gini"</span>, <span style="color: #98be65;">"gini"</span>]
+<span style="color: #dcaeea;">depth</span> = [<span style="color: #da8548; font-weight: bold;">10</span>,<span style="color: #da8548; font-weight: bold;">40</span>, <span style="color: #da8548; font-weight: bold;">90</span>]
+<span style="color: #dcaeea;">s</span> = [<span style="color: #98be65;">"random"</span>, <span style="color: #98be65;">"best"</span>, <span style="color: #98be65;">"random"</span>]
+<span style="color: #dcaeea;">msl</span> = [<span style="color: #da8548; font-weight: bold;">2</span>,<span style="color: #da8548; font-weight: bold;">3</span>,<span style="color: #da8548; font-weight: bold;">4</span>]
+
+<span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #da8548; font-weight: bold;">3</span>):
+    <span style="color: #dcaeea;">config</span> = <span style="color: #98be65;">"criterion : "</span> + <span style="color: #c678dd;">str</span>(c[i]) + <span style="color: #98be65;">" depth : "</span> + <span style="color: #c678dd;">str</span>(depth[i]) + <span style="color: #98be65;">" splitter : "</span> + <span style="color: #c678dd;">str</span>(s[i]) + <span style="color: #98be65;">" min_samples_leaf : "</span> + <span style="color: #c678dd;">str</span>(msl[i])
+    <span style="color: #dcaeea;">clf</span> = DecisionTreeClassifier(criterion=c[i], max_depth=depth[i], splitter=s[i], min_samples_leaf=msl[i])
+    clf = clf.fit(x_train,y_train)
+    y_pred = clf.predict(x_test)
+    <span style="color: #c678dd;">print</span>(config)
+    <span style="color: #c678dd;">print</span>(<span style="color: #98be65;">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))
+
+
+
+</pre>
+</div>
+
+<pre class="example">
+criterion : entropy depth : 10 splitter : random min_samples_leaf : 2
+Accuracy: 0.9383333333333334
+criterion : gini depth : 40 splitter : best min_samples_leaf : 3
+Accuracy: 0.945
+criterion : gini depth : 90 splitter : random min_samples_leaf : 4
+Accuracy: 0.9433333333333334
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org7909166" class="outline-2">
+<h2 id="org7909166"><span class="section-number-2">2.</span> Heart</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+
+
+<div id="outline-container-orgce08e64" class="outline-3">
+<h3 id="orgce08e64"><span class="section-number-3">2.1.</span> imports</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">import</span> numpy <span style="color: #51afef;">as</span> np
+<span style="color: #51afef;">import</span> pandas <span style="color: #51afef;">as</span> pd
+<span style="color: #51afef;">import</span> math
+<span style="color: #51afef;">from</span> sklearn.model_selection <span style="color: #51afef;">import</span> train_test_split
+<span style="color: #51afef;">from</span> sklearn.metrics <span style="color: #51afef;">import</span> classification_report
+<span style="color: #51afef;">from</span> sklearn.naive_bayes <span style="color: #51afef;">import</span> GaussianNB
+
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4e4821" class="outline-3">
+<h3 id="orgf4e4821"><span class="section-number-3">2.2.</span> read data</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">raw_data</span> = pd.read_csv(<span style="color: #98be65;">"heart.csv"</span>)
+<span style="color: #dcaeea;">train_data</span> = raw_data[[<span style="color: #98be65;">'chol'</span>, <span style="color: #98be65;">'trestbps'</span>, <span style="color: #98be65;">'thalach'</span>, <span style="color: #98be65;">'target'</span>]]
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4326220" class="outline-3">
+<h3 id="org4326220"><span class="section-number-3">2.3.</span> Gaussian Naive Bayes</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">means</span> = train_data.groupby([<span style="color: #98be65;">"target"</span>]).mean()
+<span style="color: #dcaeea;">var</span> = train_data.groupby([<span style="color: #98be65;">"target"</span>]).var()
+<span style="color: #dcaeea;">prior</span> = (train_data.groupby(<span style="color: #98be65;">"target"</span>).count() / <span style="color: #c678dd;">len</span>(train_data)).iloc[:,<span style="color: #da8548; font-weight: bold;">1</span>]
+
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #5B6268;"># </span><span style="color: #5B6268;">got idea from another code</span>
+
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">Normal</span>(n, mu, var):
+
+    <span style="color: #dcaeea;">sd</span> = np.sqrt(var)
+    <span style="color: #dcaeea;">pdf</span> = (np.e ** (-<span style="color: #da8548; font-weight: bold;">0.5</span> * ((n - mu)/sd) ** <span style="color: #da8548; font-weight: bold;">2</span>)) / (sd * np.sqrt(<span style="color: #da8548; font-weight: bold;">2</span> * np.pi))
+
+    <span style="color: #51afef;">return</span> pdf
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">Predict</span>(X):
+    <span style="color: #dcaeea;">Predictions</span> = []
+
+    <span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> X.<span style="color: #dcaeea;">index</span>:
+
+        ClassLikelihood = []
+        <span style="color: #dcaeea;">instance</span> = X.loc[i]
+
+        <span style="color: #51afef;">for</span> cls <span style="color: #51afef;">in</span> <span style="color: #dcaeea;">classes</span>:
+
+            FeatureLikelihoods = []
+            FeatureLikelihoods.append(np.log(prior[cls]))
+
+            <span style="color: #51afef;">for</span> col <span style="color: #51afef;">in</span> x_train.<span style="color: #dcaeea;">columns</span>:
+
+                data = instance[col]
+
+                <span style="color: #dcaeea;">mean</span> = means[col].loc[cls]
+                <span style="color: #dcaeea;">variance</span> = var[col].loc[cls]
+
+                <span style="color: #dcaeea;">Likelihood</span> = Normal(data, mean, variance)
+
+                <span style="color: #51afef;">if</span> Likelihood != <span style="color: #da8548; font-weight: bold;">0</span>:
+                    <span style="color: #dcaeea;">Likelihood</span> = np.log(Likelihood)
+                <span style="color: #51afef;">else</span>:
+                    Likelihood = <span style="color: #da8548; font-weight: bold;">1</span>/<span style="color: #c678dd;">len</span>(train)
+
+                FeatureLikelihoods.append(Likelihood)
+
+            <span style="color: #dcaeea;">TotalLikelihood</span> = <span style="color: #c678dd;">sum</span>(FeatureLikelihoods)
+            ClassLikelihood.append(TotalLikelihood)
+
+        <span style="color: #dcaeea;">MaxIndex</span> = ClassLikelihood.index(<span style="color: #c678dd;">max</span>(ClassLikelihood))
+        <span style="color: #dcaeea;">Prediction</span> = classes[MaxIndex]
+        Predictions.append(Prediction)
+
+    <span style="color: #51afef;">return</span> Predictions
+
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+
+<span style="color: #dcaeea;">train_data</span> = raw_data[[<span style="color: #98be65;">'chol'</span>, <span style="color: #98be65;">'trestbps'</span>, <span style="color: #98be65;">'thalach'</span>]]
+<span style="color: #dcaeea;">y</span> = raw_data.target
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(train_data, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>)
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">PredictTrain</span> = Predict(x_train)
+<span style="color: #dcaeea;">PredictTest</span> = Predict(x_test)
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">Accuracy</span>(y, prediction):
+
+    <span style="color: #5B6268;"># </span><span style="color: #5B6268;">Function to calculate accuracy</span>
+    <span style="color: #dcaeea;">y</span> = <span style="color: #c678dd;">list</span>(y)
+    <span style="color: #dcaeea;">prediction</span> = <span style="color: #c678dd;">list</span>(prediction)
+    <span style="color: #dcaeea;">score</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+
+    <span style="color: #51afef;">for</span> i, j <span style="color: #51afef;">in</span> <span style="color: #c678dd;">zip</span>(y, prediction):
+        <span style="color: #51afef;">if</span> i == j:
+            score += <span style="color: #da8548; font-weight: bold;">1</span>
+
+    <span style="color: #51afef;">return</span> score / <span style="color: #c678dd;">len</span>(y)
+
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">acc_tr</span> = Accuracy(y_train, PredictTrain)
+
+<span style="color: #dcaeea;">acc_test</span> = Accuracy(y_test, PredictTest)
+<span style="color: #c678dd;">print</span>(acc_tr)
+<span style="color: #c678dd;">print</span>(acc_test)
+<span style="color: #c678dd;">print</span>(classification_report(y_test,PredictTest))
+
+
+
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #dcaeea;">x</span> = raw_data[[<span style="color: #98be65;">'chol'</span>, <span style="color: #98be65;">'trestbps'</span>, <span style="color: #98be65;">'thalach'</span>]]
+<span style="color: #dcaeea;">y</span> = raw_data.target
+<span style="color: #dcaeea;">x_train</span>, <span style="color: #dcaeea;">x_test</span>, <span style="color: #dcaeea;">y_train</span>, <span style="color: #dcaeea;">y_test</span> = train_test_split(x, y, test_size=<span style="color: #da8548; font-weight: bold;">0.2</span>, random_state=<span style="color: #da8548; font-weight: bold;">40</span>)
+clf = GaussianNB()
+clf.fit(x_train, y_train)
+<span style="color: #c678dd;">print</span>(classification_report(y_test,clf.predict(x_test)))
+</pre>
+</div>
+
+<pre class="example">
+              precision    recall  f1-score   support
+
+           0       0.67      0.62      0.64        26
+           1       0.73      0.77      0.75        35
+
+    accuracy                           0.70        61
+   macro avg       0.70      0.69      0.70        61
+weighted avg       0.70      0.70      0.70        61
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org80b9bc6" class="outline-2">
+<h2 id="org80b9bc6"><span class="section-number-2">3.</span> Questions</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org754ab56" class="outline-3">
+<h3 id="org754ab56"><span class="section-number-3">3.1.</span> Task 1</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org54b5030" class="outline-4">
+<h4 id="org54b5030"><span class="section-number-4">3.1.1.</span> Q 5</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>A kernel is a function used in SVM for helping to solve problems. They provide shortcuts to avoid complex calculations. The amazing thing about kernel is that we can go to higher dimensions and perform smooth calculations with the help of it.</li>
+<li>We can go up to an infinite number of dimensions using kernels.</li>
+<li>Sometimes, we cannot have a hyperplane for certain problems. This problem arises when we go up to higher dimensions and try to form a hyperplane.</li>
+<li>A kernel helps to form the hyperplane in the higher dimension without raising the complexity.</li>
+<li>Overfitting happens when there are more feature sets than sample sets in the data. We can solve the problem by either increasing the data or by choosing the right kernel.</li>
+
+<li>There are kernels like RBF that work well with smaller data as well. But, RBF is a universal kernel and using it on smaller datasets might increase the chances of overfitting.</li>
+
+<li>Hence, the use of simpler kernels like linear and polynomial is encouraged.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org1896981" class="outline-4">
+<h4 id="org1896981"><span class="section-number-4">3.1.2.</span> Q 9 part B</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>One hot encoding is useful for data that has no relationship to each other. Machine learning algorithms treat the order of numbers as an attribute of significance. In other words, they will read a higher number as better or more important than a lower number.</li>
+
+<li>While this is helpful for some ordinal situations, some input data does not have any ranking for category values, and this can lead to issues with predictions and poor performance. That’s when one hot encoding saves the day.</li>
+
+<li>One hot encoding makes our training data more useful and expressive, and it can be rescaled easily. By using numeric values, we more easily determine a probability for our values. In particular, one hot encoding is used for our output values, since it provides more nuanced predictions than single labels.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf425892" class="outline-4">
+<h4 id="orgf425892"><span class="section-number-4">3.1.3.</span> Q 9 , part C</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>When our original continuous data do not follow the bell curve, we can transform this data to make it as “normal” as possible so that the statistical analysis results from this data become more valid. In other words, the transformation reduces or removes the skewness of our original data. The important caveat here is that the original data has to follow or approximately follow a log-normal distribution. Otherwise, the log transformation won’t work.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org8dce0ce" class="outline-4">
+<h4 id="org8dce0ce"><span class="section-number-4">3.1.4.</span> Q 11</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>The CART algorithm produces only binary Trees: non-leaf nodes always have two children (i.e., questions only have yes/no answers).</li>
+
+<li>On the contrary, other Tree algorithms such as ID3 can produce Decision Trees with nodes having more than two children.</li>
+
+<li>ID3 (Iterative Dichotomiser 3) was developed in 1986 by Ross Quinlan. The algorithm creates a multiway tree, finding for each node (i.e. in a greedy manner) the categorical feature that will yield the largest information gain for categorical targets. Trees are grown to their maximum size and then a pruning step is usually applied to improve the ability of the tree to generalise to unseen data.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>CART (Classification and Regression Trees) is very similar to C4.5, but it differs in that it supports numerical target variables (regression) and does not compute rule sets. CART constructs binary trees using the feature and threshold that yields the largest information gain at each node.</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgcdbc9cf" class="outline-4">
+<h4 id="orgcdbc9cf"><span class="section-number-4">3.1.5.</span> Q 14</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<ul class="org-ul">
+<li>Pruning a decision tree helps to prevent overfitting the training data by reducing complexity so that our model generalizes well to unseen data. Pruning a decision tree means to remove a subtree that is redundant and not a useful split and replace it with a leaf node. Explainability — Pruned trees are shorter, simpler, and easier to explain.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org43418f6" class="outline-4">
+<h4 id="org43418f6"><span class="section-number-4">3.1.6.</span> Q 15</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<ul class="org-ul">
+<li>bootstrapping is a resampling technique that involves repeatedly drawing samples from our source data with replacement, often to estimate a population parameter. By “with replacement”, we mean that the same data point may be included in our resampled dataset multiple times.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Cross validation splits the available dataset to create multiple datasets, and Bootstrapping method uses the original dataset to create multiple datasets after resampling with replacement. Bootstrapping it is not as strong as Cross validation when it is used for model validation.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org46a1954" class="outline-4">
+<h4 id="org46a1954"><span class="section-number-4">3.1.7.</span> Q 16</h4>
+<div class="outline-text-4" id="text-3-1-7">
+<ul class="org-ul">
+<li>2-fold cross-validation Split the data set into two halves train on one and test on the other. This gives you two results. This approach has been shown to work well if you do it five times. it&rsquo;s used when we do not have lot&rsquo;s of data for traning parameters .</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5b52686" class="outline-3">
+<h3 id="org5b52686"><span class="section-number-3">3.2.</span> Task 2</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org41ae0db" class="outline-4">
+<h4 id="org41ae0db"><span class="section-number-4">3.2.1.</span> Q 1</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>Bayes&rsquo; Theorem states that the conditional probability of an event, based on the occurrence of another event, is equal to the likelihood of the second event given the first event multiplied by the probability of the first event.</li>
+
+<li>Bayes Theorem provides a useful method for thinking about the relationship between a data set and a probability. In other words, the theorem says that the probability of a given hypothesis being true based on specific observed data can be stated as finding the probability of observing the data given the hypothesis multiplied by the probability of the hypothesis being true regardless of the data, divided by the probability of observing the data regardless of the hypothesis.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Naive Bayes classifier is a general term which refers to conditional independence of each of the features in the model.</li>
+
+<li>Bernoulli Naive Bayes : It assumes that all our features are binary such that they take only two values. Means 0s can represent “word does not occur in the document” and 1s as &ldquo;word occurs in the document&rdquo; .</li>
+
+<li>Multinomial Naive Bayes : Its is used when we have discrete data (e.g. movie ratings ranging 1 and 5 as each rating will have certain frequency to represent). In text learning we have the count of each word to predict the class or label.</li>
+
+<li>Gaussian Naive Bayes : Because of the assumption of the normal distribution, Gaussian Naive Bayes is used in cases when all our features are continuous.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mohammadb Ghorbani</p>
+<p class="date">Created: 2022-05-19 Thu 20:10</p>
+</div>
+</body>
+</html>
